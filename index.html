@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Consultoria em energia sustentável, eficiência energética e soluções renováveis para empresas e residências.">
+    
+    <title>EcoEnergia | Consultoria Sustentável</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    <a class="skip-link" href="#conteudo">
+        Pular para o conteúdo principal
+    </a>
+
+       <header class="cabecalho">
+        <a class="logo" href="#inicio" aria-label="EcoLógica Soluções, página inicial">
+            <img src="logo.jpg" alt="Logotipo da EcoLógica Soluções com uma folha verde e circuitos tecnológicos" class="img-logo">
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-expanded="false"
+            aria-controls="menu-principal"
+            aria-label="Abrir menu de navegação">
+            <span aria-hidden="true">☰</span>
+        </button>
+
+        <nav id="menu-principal" aria-label="Navegação principal">
+            <ul class="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre nós</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#beneficios">Benefícios</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main id="conteudo">
+        <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+            <div class="hero-conteudo">
+                <p class="etiqueta">ENERGIA LIMPA PARA UM FUTURO MELHOR</p>
+
+                <h1 id="titulo-principal">
+                    Um futuro mais sustentável começa com você.
+                </h1>
+
+                <p>
+                    Ajudamos empresas e residências a economizar energia,
+                    reduzir custos e adotar soluções sustentáveis.
+                </p>
+
+                <div class="hero-acoes">
+                    <a class="botao botao-principal" href="#contato">
+                        Solicitar consultoria
+                    </a>
+                    <a class="botao botao-secundario" href="#servicos">
+                        Conhecer serviços
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao sobre" id="sobre"
+                 aria-labelledby="titulo-sobre">
+            <div class="secao-conteudo">
+                <p class="etiqueta">QUEM SOMOS</p>
+                <h2 id="titulo-sobre">Energia inteligente, planeta saudável</h2>
+
+                <p>
+                    Somos uma consultoria especializada em soluções de
+                    energia sustentável. Nosso objetivo é orientar pessoas
+                    e empresas na transição para um consumo energético
+                    mais eficiente, econômico e responsável.
+                </p>
+
+                <p>
+                    Analisamos as necessidades de cada cliente para propor
+                    estratégias que combinem economia, inovação e
+                    responsabilidade ambiental.
+                </p>
+            </div>
+        </section>
+
+        <section class="secao servicos" id="servicos"
+                 aria-labelledby="titulo-servicos">
+            <div class="container">
+                <p class="etiqueta">NOSSAS SOLUÇÕES</p>
+                <h2 id="titulo-servicos">Como podemos ajudar?</h2>
+
+                <div class="grade-servicos">
+                    <article class="cartao">
+                        <span class="icone" aria-hidden="true">☀</span>
+                        <h3>Energia solar</h3>
+                        <p>
+                            Orientação para adoção de sistemas fotovoltaicos
+                            e avaliação de oportunidades de economia.
+                        </p>
+                    </article>
+
+                    <article class="cartao">
+                        <span class="icone" aria-hidden="true">♻</span>
+                        <h3>Eficiência energética</h3>
+                        <p>
+                            Identificação de desperdícios e recomendações
+                            para reduzir o consumo de energia.
+                        </p>
+                    </article>
+
+                    <article class="cartao">
+                        <span class="icone" aria-hidden="true">🌱</span>
+                        <h3>Consultoria ambiental</h3>
+                        <p>
+                            Planejamento de iniciativas sustentáveis
+                            alinhadas às necessidades do seu negócio.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao beneficios" id="beneficios"
+                 aria-labelledby="titulo-beneficios">
+            <div class="container">
+                <p class="etiqueta">POR QUE ESCOLHER A EcoLógica?</p>
+                <h2 id="titulo-beneficios">
+                    Benefícios que fazem a diferença
+                </h2>
+
+                <ul class="lista-beneficios">
+                    <li>Redução do desperdício energético.</li>
+                    <li>Potencial de economia na conta de energia.</li>
+                    <li>Decisões baseadas em análise técnica.</li>
+                    <li>Incentivo ao uso responsável dos recursos naturais.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="secao contato" id="contato"
+                 aria-labelledby="titulo-contato">
+            <div class="container contato-container">
+                <div>
+                    <p class="etiqueta">FALE COM NOSSA EQUIPE</p>
+                    <h2 id="titulo-contato">
+                        Vamos construir um futuro mais verde?
+                    </h2>
+                    <p>
+                        Envie seus dados para iniciar uma conversa
+                        sobre as necessidades do seu projeto.
+                    </p>
+                </div>
+
+                <form id="form-contato">
+                    <div class="campo">
+                        <label for="nome">Nome completo</label>
+                        <input id="nome" name="nome"
+                               type="text" autocomplete="name" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input id="email" name="email"
+                               type="email" autocomplete="email" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="assunto">Como podemos ajudar?</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="solar">Energia solar</option>
+                            <option value="eficiencia">Eficiência energética</option>
+                            <option value="ambiental">Consultoria ambiental</option>
+                            <option value="outro">Outro assunto</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Sua mensagem</label>
+                        <textarea id="mensagem" name="mensagem"
+                                  rows="4" required></textarea>
+                    </div>
+
+                    <button class="botao botao-principal" type="submit">
+                        Enviar mensagem
+                    </button>
+
+                    <p id="status-formulario"
+                       role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>
+            © <span id="ano-atual"></span> EcoLógica.
+            Todos os direitos reservados.
+        </p>
+        <p>Energia consciente. Futuro sustentável.</p>
+    </footer>
+</body>
+</html>
