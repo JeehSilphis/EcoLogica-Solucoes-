@@ -200,6 +200,10 @@ if (formulario && statusFormulario) {
                 campo.setCustomValidity(mensagens[campo.name]);
             }
             campo.setAttribute("aria-invalid", "true");
+
+            // Mostra também o aviso geral abaixo do botão de envio
+            statusFormulario.className = "status-formulario erro";
+            statusFormulario.textContent = "Há campos com erro. Corrija os campos destacados em amarelo e envie novamente.";
         });
 
         const limpar = () => {
