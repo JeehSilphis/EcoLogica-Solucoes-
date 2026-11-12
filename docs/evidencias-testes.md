@@ -1,6 +1,6 @@
 # Evidências de testes
 
-> Os itens marcados com 📸 precisam de print. Salve os prints na pasta `docs/evidencias/` com os nomes sugeridos e marque o resultado.
+> Prints tirados do **site publicado** (https://ecologica-solucoes-production.up.railway.app) em 12/11/2026 e salvos em `docs/evidencias/`. Os itens marcados com 📸 ainda precisam de print manual: o validador do W3C pede um CAPTCHA ("Confirme que é humano") e o painel do Railway exige login.
 
 ## 1. W3C Validator (HTML) - 10 páginas
 
@@ -29,27 +29,27 @@ Outras verificações automáticas feitas no código (12/11/2026): todas as tags
 
 | Teste | Resultado esperado | OK? |
 |---|---|---|
-| Tab na primeira vez | Aparece o link "Pular para o conteúdo principal" | ☐ |
+| Tab na primeira vez | Aparece o link "Pular para o conteúdo principal" | ✅ `teclado-1-pular-conteudo.png` |
 | Enter no link de pular | Foco vai para o conteúdo da página | ☐ |
-| Tab pelos botões de acessibilidade e menu | Contorno amarelo visível em cada item | ☐ |
+| Tab pelos botões de acessibilidade e menu | Contorno amarelo visível em cada item | ✅ `teclado-2-foco-menu.png` (foco em "Sobre") |
 | Enter em um item do menu | Abre a página correspondente | ☐ |
 | No celular: Enter no botão ☰ e Esc | Menu abre e fecha; foco volta ao botão | ☐ |
 | Formulário só com teclado | Todos os campos alcançáveis; Espaço marca a caixa LGPD | ☐ |
-| Notícias: Enter em "Clique para ler" | Texto completo abre e fecha | ☐ |
+| Notícias: Enter em "Clique para ler" | Texto completo abre e fecha | ✅ `teclado-3-noticia-aberta-com-enter.png` |
 | Mídia: Tab até o vídeo e Espaço | Vídeo e áudio tocam e pausam | ☐ |
 
-📸 Print sugerido: `teclado-foco.png` (mostrando o contorno amarelo).
+Os itens ainda marcados com ☐ devem ser testados à mão durante o ensaio da apresentação (Tab, Enter e Esc).
 
 ## 3. Contraste (WebAIM Contrast Checker - https://webaim.org/resources/contrastchecker/)
 
 | Combinação | Razão calculada | WCAG AA (mín. 4,5:1) |
 |---|---|---|
-| Texto branco #ffffff sobre verde escuro #164b36 | ≈ 10:1 | ✅ |
-| Texto verde #164b36 sobre menu verde claro #e8f4ec | ≈ 8,9:1 | ✅ |
+| Texto branco #ffffff sobre verde escuro #164b36 | **10,02:1** (WebAIM) | ✅ `contraste-webaim-texto-branco.png` |
+| Texto verde #164b36 sobre menu verde claro #e8f4ec | **8,87:1** (WebAIM) | ✅ `contraste-webaim-menu.png` |
 | Texto branco sobre botão verde #23734f | ≈ 5,8:1 | ✅ |
 | Links amarelo claro #ffe08a sobre verde escuro #164b36 | ≈ 9:1 | ✅ |
 
-Nas páginas, o texto fica sobre painéis escuros (opacidade 92%) e não diretamente sobre a foto de fundo. 📸 Print sugerido: `contraste-webaim.png`.
+Nas páginas, o texto fica sobre painéis escuros (opacidade 92%) e não diretamente sobre a foto de fundo.
 
 ## 4. Visualização no celular, tablet e desktop
 
@@ -61,21 +61,26 @@ Teste feito com o DevTools (F12 → ícone de celular) nas larguras 375 px, 768 
 * Vídeo, áudio e mapa ocupam 100% da largura disponível.
 
 Prints existentes do MVP: `evidencias/celular1.jpeg` a `celular8.jpeg`, `telacheia1-6.png`, `telaminimizada1-6.png`, `teladaltonismo.png`.
-📸 Novos prints sugeridos do site publicado: `final-celular.png`, `final-tablet.png`, `final-desktop.png`.
+Prints do site publicado (A06):
+* Celular (375 × 812): `final-celular.png`, `final-celular-menu-aberto.png`, `final-celular-galeria.png`, `final-celular-tabela.png`
+* Tablet (768 × 1024): `final-tablet.png`
+* Desktop (1366 × 900): `final-desktop.png`
+* As 10 páginas no desktop (também servem de plano B da apresentação): pasta `paginas/` (`01-index.png` a `10-orcamento_hospedagem.png`)
+* Recursos de acessibilidade: `acessibilidade-modo-daltonico.png`, `acessibilidade-texto-aumentado.png`
 
 ## 5. Formulário (contato.html)
 
 | Teste | Resultado esperado | OK? |
 |---|---|---|
 | Enviar vazio | Navegador mostra "Digite seu nome completo..." e para no 1º campo | ☐ |
-| Nome com números ("Maria 123") | Mensagem de erro do nome | ☐ |
-| E-mail sem @ | Mensagem de e-mail inválido | ☐ |
-| Telefone com 8 dígitos | Mensagem pedindo 10 ou 11 dígitos | ☐ |
+| Nome com números ("Maria 123") | Mensagem de erro do nome | ✅ `formulario-1-erro-campos.png` |
+| E-mail sem @ | Mensagem de e-mail inválido | ✅ `formulario-1-erro-campos.png` |
+| Telefone com 4 dígitos | Mensagem pedindo 10 ou 11 dígitos | ✅ `formulario-1-erro-campos.png` |
 | Data no passado | Não é aceita (mínimo = hoje) | ☐ |
 | Funcionários = 0 | Mensagem pedindo número a partir de 1 | ☐ |
-| Tudo correto | Mensagem verde "Obrigado, ...!" e formulário limpo | ☐ |
+| Tudo correto | Mensagem verde "Obrigado, ...!" e formulário limpo | ✅ `formulario-3-envio-correto.png` |
 
-Teste automatizado local (12/11/2026): nome "Maria 123" foi bloqueado com a mensagem em português; preenchimento correto exibiu a mensagem de sucesso; data mínima ficou igual à data do dia.
+Ao enviar com erro, os campos inválidos ficam com borda amarela e aparece o aviso "Há campos com erro..." abaixo do botão (`formulario-2-erro-aviso.png`). Teste automatizado (12/11/2026): nome "Maria 123" foi bloqueado com a mensagem em português; preenchimento correto exibiu a mensagem de sucesso; data mínima ficou igual à data do dia.
 
 ## 6. Multimídia e links no endereço publicado
 
@@ -87,3 +92,9 @@ Teste automatizado local (12/11/2026): nome "Maria 123" foi bloqueado com a mens
 | Todas as imagens da galeria aparecem | ✅ todas respondem 200 |
 | Todos os 10 itens do menu abrem sem erro 404 | ✅ |
 | Endereço começa com https:// (cadeado) | ✅ http redireciona para https |
+
+## 7. Painel do Railway
+
+| Item | Print |
+|---|---|
+| Serviço com deploy ACTIVE e domínio público | 📸 `railway-deploy-ativo.png` (tirar manualmente no painel do Railway) |
