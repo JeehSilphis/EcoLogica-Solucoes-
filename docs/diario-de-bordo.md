@@ -42,5 +42,9 @@ Registro das decisões, aprendizados, dificuldades e soluções da Atividade A05
 * **Deploy:** criados `package.json` e `serve.json` para o Railway servir o site estático.
 * **Aprendizado:** o Railway precisa de um comando de início (`npm start`) e usa a variável `PORT`; links relativos devem respeitar maiúsculas e minúsculas porque o servidor do Railway é Linux.
 
-### __/11/2026 - Deploy no Railway
-* (Preencher) Data em que o repositório foi ligado ao Railway, URL gerada e testes feitos no endereço publicado.
+### 12/11/2026 - Deploy no Railway
+* **Atividade:** código enviado ao GitHub (https://github.com/JeehSilphis/EcoLogica-Solucoes-) por cima do histórico do MVP; repositório ligado ao Railway (plano Free/Trial) com deploy automático; domínio gerado em Settings > Networking > Generate Domain.
+* **URL publicada:** https://ecologica-solucoes-production.up.railway.app (HTTPS; o endereço http:// redireciona para https://).
+* **Dificuldade:** o endereço principal (/) dava erro 404, porque o servidor `serve` estava configurado sem "cleanUrls" e sem listagem de pastas, então não procurava o index.html.
+* **Solução:** regra de rewrite de "/" para "/index.html" no `serve.json`; o Railway publicou a correção sozinho após o `git push`.
+* **Testes no site publicado:** as 10 páginas, CSS, JS, imagens, vídeo e podcast responderam sem erro; formulário validado; layout no celular conferido; W3C sem erros.

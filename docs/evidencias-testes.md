@@ -4,6 +4,8 @@
 
 ## 1. W3C Validator (HTML) - 10 páginas
 
+**Site publicado validado em 12/11/2026 (https://ecologica-solucoes-production.up.railway.app):** 0 erros e 0 avisos nas 10 páginas. Index, sobre, projetos, impacto e acessibilidade foram validadas no validator.w3.org online pela URL; as outras 5 páginas foram validadas pela URL publicada com o mesmo validador oficial rodando localmente (o site online limitou as consultas seguidas). Falta tirar os prints.
+
 Como testar: acessar https://validator.w3.org/ → aba **Validate by URI** → colar o endereço de cada página publicada no Railway → **Check**.
 
 | Página | Resultado | Print |
@@ -79,9 +81,9 @@ Teste automatizado local (12/11/2026): nome "Maria 123" foi bloqueado com a mens
 
 | Item | OK? |
 |---|---|
-| Vídeo toca com poster | ☐ |
-| Podcast toca | ☐ |
-| Mapa aparece | ☐ |
-| Todas as imagens da galeria aparecem | ☐ |
-| Todos os 10 itens do menu abrem sem erro 404 | ☐ |
-| Endereço começa com https:// (cadeado) | ☐ |
+| Vídeo toca com poster | ✅ carregou no site publicado (12/11) |
+| Podcast toca | ✅ carregou no site publicado (12/11) |
+| Mapa aparece | ✅ |
+| Todas as imagens da galeria aparecem | ✅ todas respondem 200 |
+| Todos os 10 itens do menu abrem sem erro 404 | ✅ |
+| Endereço começa com https:// (cadeado) | ✅ http redireciona para https |

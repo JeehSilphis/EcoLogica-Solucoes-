@@ -12,10 +12,9 @@ Site institucional de uma empresa fictícia de consultoria em **energia sustent�
 
 | Item | Endereço |
 |---|---|
-| Site publicado (Railway, HTTPS) | **https://PREENCHER.up.railway.app** |
+| Site publicado (Railway, HTTPS) | **https://ecologica-solucoes-production.up.railway.app** |
 | Repositório no GitHub | **https://github.com/JeehSilphis/EcoLogica-Solucoes-** |
 
-> Após o deploy, substitua os dois endereços acima (e no `README.md` da raiz).
 
 ## 🎯 Tema
 
