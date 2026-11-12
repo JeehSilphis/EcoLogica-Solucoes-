@@ -1,25 +1,27 @@
 # Evidências de testes
 
-> Prints tirados do **site publicado** (https://ecologica-solucoes-production.up.railway.app) em 12/11/2026 e salvos em `docs/evidencias/`. Os itens marcados com 📸 ainda precisam de print manual: o validador do W3C pede um CAPTCHA ("Confirme que é humano") e o painel do Railway exige login.
+> Prints tirados do **site publicado** (https://ecologica-solucoes-production.up.railway.app) em 12/11/2026 e salvos em `docs/evidencias/`.
 
 ## 1. W3C Validator (HTML) - 10 páginas
 
-**Site publicado validado em 12/11/2026 (https://ecologica-solucoes-production.up.railway.app):** 0 erros e 0 avisos nas 10 páginas. Index, sobre, projetos, impacto e acessibilidade foram validadas no validator.w3.org online pela URL; as outras 5 páginas foram validadas pela URL publicada com o mesmo validador oficial rodando localmente (o site online limitou as consultas seguidas). Falta tirar os prints.
+**Site publicado validado em 12/11/2026 (https://ecologica-solucoes-production.up.railway.app):** 0 erros e 0 avisos nas 10 páginas. Index, sobre, projetos, impacto e acessibilidade foram validadas no validator.w3.org online pela URL; as outras 5 páginas foram validadas pela URL publicada com o mesmo validador oficial rodando localmente (o site online limitou as consultas seguidas). 
+
+**Sobre os prints:** no dia 12/11 o validator.w3.org estava bloqueando as consultas com uma verificação anti-robô (Cloudflare, erro 429), então os prints foram feitos com o **mesmo validador do W3C (Nu Html Checker, vnu 26.11.9) rodando localmente**, validando cada página **pela URL publicada no Railway**. A interface e o resultado são os mesmos do validator.w3.org/nu. Para mostrar ao vivo, use https://validator.w3.org/nu/ com a URL do site.
 
 Como testar: acessar https://validator.w3.org/ → aba **Validate by URI** → colar o endereço de cada página publicada no Railway → **Check**.
 
 | Página | Resultado | Print |
 |---|---|---|
-| index.html | ☐ sem erros | 📸 `w3c-index.png` |
-| sobre.html | ☐ sem erros | 📸 `w3c-sobre.png` |
-| projetos.html | ☐ sem erros | 📸 `w3c-projetos.png` |
-| impacto.html | ☐ sem erros | 📸 `w3c-impacto.png` |
-| acessibilidade.html | ☐ sem erros | 📸 `w3c-acessibilidade.png` |
-| galeria.html | ☐ sem erros | 📸 `w3c-galeria.png` |
-| midia.html | ☐ sem erros | 📸 `w3c-midia.png` |
-| noticias.html | ☐ sem erros | 📸 `w3c-noticias.png` |
-| contato.html | ☐ sem erros | 📸 `w3c-contato.png` |
-| orcamento_hospedagem.html | ☐ sem erros | 📸 `w3c-orcamento.png` |
+| index.html | ✅ 0 erros, 0 avisos | `w3c-index.png` |
+| sobre.html | ✅ 0 erros, 0 avisos | `w3c-sobre.png` |
+| projetos.html | ✅ 0 erros, 0 avisos | `w3c-projetos.png` |
+| impacto.html | ✅ 0 erros, 0 avisos | `w3c-impacto.png` |
+| acessibilidade.html | ✅ 0 erros, 0 avisos | `w3c-acessibilidade.png` |
+| galeria.html | ✅ 0 erros, 0 avisos | `w3c-galeria.png` |
+| midia.html | ✅ 0 erros, 0 avisos | `w3c-midia.png` |
+| noticias.html | ✅ 0 erros, 0 avisos | `w3c-noticias.png` |
+| contato.html | ✅ 0 erros, 0 avisos | `w3c-contato.png` |
+| orcamento_hospedagem.html | ✅ 0 erros, 0 avisos | `w3c-orcamento.png` |
 
 **Validação local com o validador oficial do W3C (Nu HTML Checker `vnu.jar`, versão 26.11.9) em 12/11/2026:** as 10 páginas HTML e os 2 arquivos CSS passaram com **0 erros e 0 avisos** (`java -jar vnu.jar --also-check-css *.html css/*.css`). Na versão antiga das páginas o mesmo validador acusou: `midia.html` - erro "Bad value 100% for attribute width on element iframe"; `impacto.html` - aviso "The border attribute on the table element is obsolete". Os dois foram corrigidos.
 
@@ -97,4 +99,4 @@ Ao enviar com erro, os campos inválidos ficam com borda amarela e aparece o avi
 
 | Item | Print |
 |---|---|
-| Serviço com deploy ACTIVE e domínio público | 📸 `railway-deploy-ativo.png` (tirar manualmente no painel do Railway) |
+| Serviço com deploy ACTIVE, "Deployment successful" e domínio público ecologica-solucoes-production.up.railway.app | ✅ `railway-deploy-ativo.png` |
