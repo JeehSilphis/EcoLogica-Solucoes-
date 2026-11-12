@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria de imagens de instalações de energia solar e adaptações de acessibilidade, com legendas e fontes.">
+    <title>Galeria | EcoLógica Soluções</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style1.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+    <header class="cabecalho">
+        <!-- LADO ESQUERDO: Logotipo -->
+        <div class="logo-container">
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="EcoLógica Soluções - ir para a página inicial" class="img-logo" width="500" height="500">
+            </a>
+        </div>
+
+        <!-- LADO DIREITO: Acessibilidade + Menu -->
+        <div class="bloco-direita">
+
+            <!-- Ferramentas de acessibilidade -->
+            <div class="acessibilidade-container">
+                <button type="button" id="btn-daltonismo" class="btn-acessibilidade" aria-pressed="false">Daltônicos, clique aqui para ajuste de cores</button>
+                <button type="button" id="btn-leitor" class="btn-acessibilidade" aria-pressed="false">🔊 Clique aqui para ouvir a página</button>
+                <button type="button" id="btn-zoom" class="btn-acessibilidade" aria-pressed="false">+ Clique aqui para aumentar o tamanho do texto</button>
+            </div>
+
+            <!-- Botão do menu no celular -->
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
+                <span aria-hidden="true">☰</span>
+            </button>
+
+            <!-- Menu principal -->
+            <nav class="menu-container" id="menu-principal" aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="impacto.html">Impacto</a></li>
+                    <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                    <li><a href="galeria.html" aria-current="page">Galeria</a></li>
+                    <li><a href="midia.html">Mídia</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="conteudo" class="container secao">
+        <section aria-labelledby="titulo-galeria">
+            <p class="etiqueta">NOSSO TRABALHO EM IMAGENS</p>
+            <h1 id="titulo-galeria">Galeria de instalações</h1>
+            <p>Exemplos de soluções de energia limpa e acessibilidade semelhantes às que implantamos.</p>
+
+            <div class="grade-galeria">
+                <figure>
+                    <img src="img/painelsolar.jpeg" alt="Vista aérea de prédio residencial com o telhado coberto por painéis solares azuis" width="1280" height="960" loading="lazy">
+                    <figcaption>Painéis solares em telhado de condomínio. Fonte: imagem ilustrativa de banco de imagens gratuito.</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/painelsolar1.jpg" alt="Prédio de apartamentos branco com várias fileiras de painéis solares na cobertura" width="940" height="326" loading="lazy">
+                    <figcaption>Geração de energia solar em edifício residencial. Fonte: imagem ilustrativa de banco de imagens gratuito.</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/rampa.jpg" alt="Rampa metálica de acesso com corrimãos dos dois lados na entrada de um prédio azul" width="1300" height="677" loading="lazy">
+                    <figcaption>Rampa de acesso com corrimão duplo. Fonte: imagem ilustrativa de banco de imagens gratuito.</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/rampa2.jpg" alt="Rampa de concreto com corrimão marrom ao lado da porta de entrada de um prédio de tijolos" width="1000" height="1000" loading="lazy">
+                    <figcaption>Rampa de concreto adaptada para cadeirantes. Fonte: imagem ilustrativa de banco de imagens gratuito.</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/energia-limpa.jpg" alt="Duas mãos segurando terra: uma com uma planta brotando e outra com uma lâmpada acesa" width="990" height="514" loading="lazy">
+                    <figcaption>Energia limpa e natureza: símbolo da EcoLógica. Fonte: imagem ilustrativa de banco de imagens gratuito.</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="rodape">
+        <p>
+            © <span id="ano-atual">2026</span> EcoLógica Soluções.
+            Todos os direitos reservados.
+        </p>
+        <p>Energia consciente. Futuro sustentável.</p>
+    </footer>
+</body>
+</html>

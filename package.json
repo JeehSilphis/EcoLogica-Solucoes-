@@ -1,0 +1,15 @@
+{
+  "name": "ecologica-solucoes",
+  "version": "1.0.0",
+  "description": "Site EcoLógica Soluções - Atividade A06 de Desenvolvimento Front-End (Fatec SCS)",
+  "private": true,
+  "scripts": {
+    "start": "serve . --no-clipboard"
+  },
+  "dependencies": {
+    "serve": "14.2.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Medidas de inclusão para pessoas com deficiência aplicadas no site e nos projetos da EcoLógica Soluções.">
+    <title>Acessibilidade | EcoLógica Soluções</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style1.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+    <header class="cabecalho">
+        <!-- LADO ESQUERDO: Logotipo -->
+        <div class="logo-container">
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="EcoLógica Soluções - ir para a página inicial" class="img-logo" width="500" height="500">
+            </a>
+        </div>
+
+        <!-- LADO DIREITO: Acessibilidade + Menu -->
+        <div class="bloco-direita">
+
+            <!-- Ferramentas de acessibilidade -->
+            <div class="acessibilidade-container">
+                <button type="button" id="btn-daltonismo" class="btn-acessibilidade" aria-pressed="false">Daltônicos, clique aqui para ajuste de cores</button>
+                <button type="button" id="btn-leitor" class="btn-acessibilidade" aria-pressed="false">🔊 Clique aqui para ouvir a página</button>
+                <button type="button" id="btn-zoom" class="btn-acessibilidade" aria-pressed="false">+ Clique aqui para aumentar o tamanho do texto</button>
+            </div>
+
+            <!-- Botão do menu no celular -->
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
+                <span aria-hidden="true">☰</span>
+            </button>
+
+            <!-- Menu principal -->
+            <nav class="menu-container" id="menu-principal" aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="impacto.html">Impacto</a></li>
+                    <li><a href="acessibilidade.html" aria-current="page">Acessibilidade</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="midia.html">Mídia</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="conteudo" class="container secao">
+        <section aria-labelledby="titulo-acessibilidade">
+            <p class="etiqueta">INCLUSÃO PARA TODAS AS PESSOAS</p>
+            <h1 id="titulo-acessibilidade">Acessibilidade e inclusão</h1>
+            <p>Este site foi desenvolvido para que pessoas com deficiência visual, auditiva, motora e cognitiva possam navegar com autonomia. Também levamos acessibilidade para os prédios dos nossos clientes.</p>
+
+            <article>
+                <h2>Recursos de acessibilidade do site</h2>
+                <ul>
+                    <li><strong>Modo para daltônicos:</strong> troca a paleta verde por azul e laranja, cores mais fáceis de distinguir. A preferência fica salva no navegador.</li>
+                    <li><strong>Leitura em voz alta:</strong> o botão "Ouvir a página" lê o conteúdo principal usando a voz do próprio navegador.</li>
+                    <li><strong>Aumento do texto:</strong> amplia o tamanho das letras em 30% sem quebrar o layout.</li>
+                    <li><strong>Navegação por teclado:</strong> todos os links, botões e campos podem ser acessados com Tab, Shift+Tab e Enter, com foco amarelo bem visível.</li>
+                    <li><strong>Atalho "Pular para o conteúdo":</strong> primeiro item ao pressionar Tab, leva direto ao conteúdo principal.</li>
+                    <li><strong>Leitores de tela:</strong> estrutura semântica HTML5 (header, nav, main, section, article, footer), idioma pt-BR declarado e atributos ARIA como aria-expanded, aria-current e aria-live.</li>
+                    <li><strong>Imagens:</strong> todas possuem texto alternativo (alt) descritivo e legenda com a fonte.</li>
+                    <li><strong>Contraste:</strong> texto branco sobre verde escuro (#164b36), com contraste acima de 4,5:1 exigido pela WCAG 2.1 nível AA.</li>
+                    <li><strong>Formulário acessível:</strong> cada campo tem rótulo (label), instruções e mensagens de erro claras.</li>
+                    <li><strong>Movimento reduzido:</strong> animações são desativadas para quem configurou essa preferência no sistema.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h2>Acessibilidade nos projetos dos clientes</h2>
+                <ul>
+                    <li>Rampas de acesso com inclinação e corrimãos conforme a norma ABNT NBR 9050.</li>
+                    <li>Piso tátil de alerta e direcional para pessoas cegas ou com baixa visão.</li>
+                    <li>Sinalização em Braille e com alto contraste em portas e elevadores.</li>
+                    <li>Banheiros adaptados e vagas reservadas no estacionamento.</li>
+                    <li>Sistemas de alerta visual (luminoso) para pessoas surdas.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h2>Legislação de referência</h2>
+                <ul>
+                    <li><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm">Lei Brasileira de Inclusão da Pessoa com Deficiência (Lei nº 13.146/2015)</a></li>
+                    <li><a href="https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/">Diretrizes de Acessibilidade para Conteúdo Web (WCAG 2.1)</a></li>
+                    <li>ABNT NBR 9050 - Acessibilidade a edificações, mobiliário, espaços e equipamentos urbanos.</li>
+                </ul>
+                <p>Encontrou alguma barreira neste site? <a href="contato.html">Fale conosco</a> para que possamos corrigir.</p>
+            </article>
+        </section>
+    </main>
+
+
+    <footer class="rodape">
+        <p>
+            © <span id="ano-atual">2026</span> EcoLógica Soluções.
+            Todos os direitos reservados.
+        </p>
+        <p>Energia consciente. Futuro sustentável.</p>
+    </footer>
+</body>
+</html>

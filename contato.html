@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a EcoLógica Soluções, agende uma visita técnica e conheça a equipe do projeto.">
+    <title>Contato | EcoLógica Soluções</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style1.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+    <header class="cabecalho">
+        <!-- LADO ESQUERDO: Logotipo -->
+        <div class="logo-container">
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="EcoLógica Soluções - ir para a página inicial" class="img-logo" width="500" height="500">
+            </a>
+        </div>
+
+        <!-- LADO DIREITO: Acessibilidade + Menu -->
+        <div class="bloco-direita">
+
+            <!-- Ferramentas de acessibilidade -->
+            <div class="acessibilidade-container">
+                <button type="button" id="btn-daltonismo" class="btn-acessibilidade" aria-pressed="false">Daltônicos, clique aqui para ajuste de cores</button>
+                <button type="button" id="btn-leitor" class="btn-acessibilidade" aria-pressed="false">🔊 Clique aqui para ouvir a página</button>
+                <button type="button" id="btn-zoom" class="btn-acessibilidade" aria-pressed="false">+ Clique aqui para aumentar o tamanho do texto</button>
+            </div>
+
+            <!-- Botão do menu no celular -->
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
+                <span aria-hidden="true">☰</span>
+            </button>
+
+            <!-- Menu principal -->
+            <nav class="menu-container" id="menu-principal" aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="impacto.html">Impacto</a></li>
+                    <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="midia.html">Mídia</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html" aria-current="page">Contato</a></li>
+                    <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="conteudo" class="container secao">
+        <section aria-labelledby="titulo-contato">
+            <p class="etiqueta">VAMOS CONVERSAR</p>
+            <h1 id="titulo-contato">Fale conosco</h1>
+
+            <article>
+                <h2>Nossos dados</h2>
+                <ul>
+                    <li><strong>Endereço:</strong> Avenida Paulista, 2020 - Bela Vista, São Paulo - SP, 01310-200</li>
+                    <li><strong>Telefone:</strong> <a href="tel:+551140020000">(11) 4002-0000</a></li>
+                    <li><strong>E-mail:</strong> <a href="mailto:contato@ecologica.tec.br">contato@ecologica.tec.br</a></li>
+                    <li><strong>Atendimento:</strong> segunda a sexta, das 9h às 18h</li>
+                </ul>
+                <p><small>Dados fictícios, criados para este projeto acadêmico.</small></p>
+            </article>
+
+            <h2>Solicite uma visita técnica</h2>
+            <p>Campos marcados com * são obrigatórios.</p>
+            <form id="form-contato" action="#" method="post">
+                <div class="campo">
+                    <label for="nome">Nome completo *</label>
+                    <input type="text" id="nome" name="nome" required minlength="3" maxlength="80"
+                           pattern="[A-Za-zÀ-ÿ ]+" autocomplete="name" aria-describedby="ajuda-nome">
+                    <small id="ajuda-nome" class="ajuda">Use apenas letras e espaços.</small>
+                </div>
+                <div class="campo">
+                    <label for="email">E-mail corporativo *</label>
+                    <input type="email" id="email" name="email" required autocomplete="email"
+                           aria-describedby="ajuda-email">
+                    <small id="ajuda-email" class="ajuda">Exemplo: nome@empresa.com.br</small>
+                </div>
+                <div class="campo">
+                    <label for="telefone">Telefone com DDD *</label>
+                    <input type="tel" id="telefone" name="telefone" required pattern="[0-9]{10,11}"
+                           inputmode="numeric" autocomplete="tel" aria-describedby="ajuda-telefone">
+                    <small id="ajuda-telefone" class="ajuda">Somente números, 10 ou 11 dígitos. Exemplo: 11987654321</small>
+                </div>
+                <div class="campo">
+                    <label for="data">Data desejada para a visita *</label>
+                    <input type="date" id="data" name="data" required aria-describedby="ajuda-data">
+                    <small id="ajuda-data" class="ajuda">Escolha uma data a partir de hoje.</small>
+                </div>
+                <div class="campo">
+                    <label for="funcionarios">Número de funcionários *</label>
+                    <input type="number" id="funcionarios" name="funcionarios" min="1" max="100000" required
+                           aria-describedby="ajuda-funcionarios">
+                    <small id="ajuda-funcionarios" class="ajuda">Informe um número a partir de 1.</small>
+                </div>
+                <div class="campo">
+                    <label for="servico">Serviço de interesse *</label>
+                    <select id="servico" name="servico" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="solar">Energia solar</option>
+                        <option value="eficiencia">Auditoria de eficiência energética</option>
+                        <option value="acessibilidade">Adaptação para acessibilidade</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" maxlength="1000"></textarea>
+                </div>
+                <div class="campo campo-checkbox">
+                    <input type="checkbox" id="lgpd" name="lgpd" required>
+                    <label for="lgpd">Autorizo o uso dos meus dados apenas para retorno deste contato (LGPD) *</label>
+                </div>
+                <button type="submit" class="botao botao-principal">Enviar solicitação</button>
+                <p id="status-formulario" class="status-formulario" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section aria-labelledby="titulo-equipe">
+            <h2 id="titulo-equipe">Nossa equipe</h2>
+            <ul class="lista-equipe">
+                <li><strong>Jéssica da Silva Soares</strong> - desenvolvimento das 10 páginas (HTML5, CSS3 e JavaScript), identidade visual, acessibilidade, documentação e publicação no Railway.</li>
+            </ul>
+        </section>
+    </main>
+
+
+    <footer class="rodape">
+        <p>
+            © <span id="ano-atual">2026</span> EcoLógica Soluções.
+            Todos os direitos reservados.
+        </p>
+        <p>Energia consciente. Futuro sustentável.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Notícias e artigos sobre energia renovável, certificação ESG e acessibilidade da EcoLógica Soluções.">
+    <title>Notícias | EcoLógica Soluções</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style1.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+    <header class="cabecalho">
+        <!-- LADO ESQUERDO: Logotipo -->
+        <div class="logo-container">
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="EcoLógica Soluções - ir para a página inicial" class="img-logo" width="500" height="500">
+            </a>
+        </div>
+
+        <!-- LADO DIREITO: Acessibilidade + Menu -->
+        <div class="bloco-direita">
+
+            <!-- Ferramentas de acessibilidade -->
+            <div class="acessibilidade-container">
+                <button type="button" id="btn-daltonismo" class="btn-acessibilidade" aria-pressed="false">Daltônicos, clique aqui para ajuste de cores</button>
+                <button type="button" id="btn-leitor" class="btn-acessibilidade" aria-pressed="false">🔊 Clique aqui para ouvir a página</button>
+                <button type="button" id="btn-zoom" class="btn-acessibilidade" aria-pressed="false">+ Clique aqui para aumentar o tamanho do texto</button>
+            </div>
+
+            <!-- Botão do menu no celular -->
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
+                <span aria-hidden="true">☰</span>
+            </button>
+
+            <!-- Menu principal -->
+            <nav class="menu-container" id="menu-principal" aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="impacto.html">Impacto</a></li>
+                    <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="midia.html">Mídia</a></li>
+                    <li><a href="noticias.html" aria-current="page">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="conteudo" class="container secao">
+        <section aria-labelledby="titulo-noticias">
+            <p class="etiqueta">FIQUE POR DENTRO</p>
+            <h1 id="titulo-noticias">Notícias e atualizações</h1>
+            <p>Acompanhe as últimas novidades da EcoLógica Soluções no mercado de sustentabilidade e acessibilidade.</p>
+
+            <div class="lista-noticias">
+
+                <article>
+                    <h2>EcoLógica Soluções recebe certificação Ouro em ESG</h2>
+                    <p class="data-noticia">Publicado em <time datetime="2026-10-15">15 de outubro de 2026</time></p>
+                    <p>Nossa empresa foi reconhecida pelas práticas sustentáveis e de governança corporativa no setor de consultoria em tecnologia e energia verde.</p>
+
+                    <details>
+                        <summary class="link-leia-mais">Clique para ler a notícia completa</summary>
+                        <div class="conteudo-expandido">
+                            <p>A EcoLógica Soluções conquistou a Certificação Ouro em práticas ESG (Ambiental, Social e Governança). O reconhecimento reflete o nosso compromisso contínuo com tecnologias que reduzem o impacto ambiental e promovem a inclusão digital.</p>
+                            <p>Durante a cerimônia, a diretoria destacou a importância de integrar eficiência energética com ferramentas de acessibilidade web, como alto contraste para daltônicos e leitura de tela, garantindo que o futuro da tecnologia seja sustentável e para todos.</p>
+                        </div>
+                    </details>
+                </article>
+
+                <article>
+                    <h2>Nova parceria expande consultoria de energia solar em São Paulo</h2>
+                    <p class="data-noticia">Publicado em <time datetime="2026-10-28">28 de outubro de 2026</time></p>
+                    <p>Fechamos um novo acordo com fornecedores locais para baratear a instalação de painéis fotovoltaicos em edifícios comerciais.</p>
+
+                    <details>
+                        <summary class="link-leia-mais">Clique para ler a notícia completa</summary>
+                        <div class="conteudo-expandido">
+                            <p>Com o objetivo de popularizar a energia limpa, a EcoLógica Soluções assinou um acordo de distribuição que reduzirá em até 20% os custos de equipamentos para a instalação de painéis solares na Grande São Paulo.</p>
+                            <p>Nossa equipe técnica fará o levantamento arquitetônico e a simulação de economia de energia, entregando um orçamento detalhado e transparente. A iniciativa busca diminuir a pegada de carbono do polo industrial paulista, com retorno do investimento em menos de 4 anos.</p>
+                        </div>
+                    </details>
+                </article>
+
+                <article>
+                    <h2>Acessibilidade web: o novo foco das auditorias de sustentabilidade</h2>
+                    <p class="data-noticia">Publicado em <time datetime="2026-11-04">4 de novembro de 2026</time></p>
+                    <p>A sustentabilidade corporativa moderna exige que os canais digitais das empresas sejam totalmente inclusivos.</p>
+
+                    <details>
+                        <summary class="link-leia-mais">Clique para ler a notícia completa</summary>
+                        <div class="conteudo-expandido">
+                            <p>Garantir que a estrutura digital de uma empresa seja acessível não é apenas uma questão legal ou ética, mas um pilar da inovação. Sites que não funcionam com teclado, leitores de tela ou adaptações para baixa visão e daltonismo estão perdendo pontos nas métricas de ESG.</p>
+                            <p>A EcoLógica Soluções lançou seu protocolo de desenvolvimento web acessível, que utiliza a <em>Web Speech API</em> e variáveis CSS para criar ambientes inclusivos sem depender de plugins de terceiros. A tecnologia já funciona no nosso próprio site e será oferecida aos clientes no próximo trimestre.</p>
+                        </div>
+                    </details>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="rodape">
+        <p>
+            © <span id="ano-atual">2026</span> EcoLógica Soluções.
+            Todos os direitos reservados.
+        </p>
+        <p>Energia consciente. Futuro sustentável.</p>
+    </footer>
+</body>
+</html>

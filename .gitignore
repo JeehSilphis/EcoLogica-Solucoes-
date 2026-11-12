@@ -1,0 +1,8 @@
+# Arquivos que NÃO vão para o GitHub nem para o Railway
+_fora_do_site/
+node_modules/
+*.zip
+~$*
+Thumbs.db
+desktop.ini
+.DS_Store

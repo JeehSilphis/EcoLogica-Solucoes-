@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projetos de energia renovável, eficiência energética e adaptação predial acessível desenvolvidos pela EcoLógica Soluções.">
+    <title>Projetos | EcoLógica Soluções</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style1.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+    <header class="cabecalho">
+        <!-- LADO ESQUERDO: Logotipo -->
+        <div class="logo-container">
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="EcoLógica Soluções - ir para a página inicial" class="img-logo" width="500" height="500">
+            </a>
+        </div>
+
+        <!-- LADO DIREITO: Acessibilidade + Menu -->
+        <div class="bloco-direita">
+
+            <!-- Ferramentas de acessibilidade -->
+            <div class="acessibilidade-container">
+                <button type="button" id="btn-daltonismo" class="btn-acessibilidade" aria-pressed="false">Daltônicos, clique aqui para ajuste de cores</button>
+                <button type="button" id="btn-leitor" class="btn-acessibilidade" aria-pressed="false">🔊 Clique aqui para ouvir a página</button>
+                <button type="button" id="btn-zoom" class="btn-acessibilidade" aria-pressed="false">+ Clique aqui para aumentar o tamanho do texto</button>
+            </div>
+
+            <!-- Botão do menu no celular -->
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
+                <span aria-hidden="true">☰</span>
+            </button>
+
+            <!-- Menu principal -->
+            <nav class="menu-container" id="menu-principal" aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+                    <li><a href="impacto.html">Impacto</a></li>
+                    <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="midia.html">Mídia</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="conteudo" class="container secao">
+        <section aria-labelledby="titulo-projetos">
+            <p class="etiqueta">O QUE FAZEMOS</p>
+            <h1 id="titulo-projetos">Nossos projetos</h1>
+            <p>Cada projeto une benefício ambiental, econômico e social. Conheça as principais frentes de atuação.</p>
+
+            <article>
+                <h2>Consultoria em energia renovável</h2>
+                <p>Auxiliamos empresas na transição para matrizes energéticas limpas, otimizando o consumo e reduzindo emissões.</p>
+                <p><strong>Impacto:</strong> menor pegada de carbono e economia na conta de energia (ODS 7 e 13).</p>
+            </article>
+            <article>
+                <h2>Adaptação predial acessível</h2>
+                <p>Reestruturação de espaços corporativos para garantir acessibilidade física, visual e auditiva a colaboradores e clientes: rampas, piso tátil, sinalização em Braille e banheiros adaptados.</p>
+                <p><strong>Impacto:</strong> inclusão de pessoas com deficiência no trabalho e no consumo (ODS 10 e 11).</p>
+            </article>
+            <article>
+                <h2>Transição para energia solar corporativa</h2>
+                <p>Implantação de sistemas fotovoltaicos em galpões industriais, reduzindo a dependência da rede elétrica tradicional e as emissões de carbono da cadeia produtiva.</p>
+                <p><strong>Impacto:</strong> geração própria de energia limpa e criação de empregos verdes.</p>
+            </article>
+            <article>
+                <h2>Auditoria de eficiência energética</h2>
+                <p>Mapeamento de desperdícios em infraestruturas de TI e data centers, com soluções de resfriamento inteligente e iluminação LED automatizada.</p>
+                <p><strong>Impacto:</strong> redução do consumo sem perda de produtividade (ODS 12).</p>
+            </article>
+
+            <p><a class="botao botao-principal" href="contato.html">Quero um projeto para minha empresa</a></p>
+        </section>
+    </main>
+
+
+    <footer class="rodape">
+        <p>
+            © <span id="ano-atual">2026</span> EcoLógica Soluções.
+            Todos os direitos reservados.
+        </p>
+        <p>Energia consciente. Futuro sustentável.</p>
+    </footer>
+</body>
+</html>

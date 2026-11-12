@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vídeo institucional, podcast e mapa da sede da EcoLógica Soluções.">
+    <title>Mídia | EcoLógica Soluções</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style1.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+    <header class="cabecalho">
+        <!-- LADO ESQUERDO: Logotipo -->
+        <div class="logo-container">
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="EcoLógica Soluções - ir para a página inicial" class="img-logo" width="500" height="500">
+            </a>
+        </div>
+
+        <!-- LADO DIREITO: Acessibilidade + Menu -->
+        <div class="bloco-direita">
+
+            <!-- Ferramentas de acessibilidade -->
+            <div class="acessibilidade-container">
+                <button type="button" id="btn-daltonismo" class="btn-acessibilidade" aria-pressed="false">Daltônicos, clique aqui para ajuste de cores</button>
+                <button type="button" id="btn-leitor" class="btn-acessibilidade" aria-pressed="false">🔊 Clique aqui para ouvir a página</button>
+                <button type="button" id="btn-zoom" class="btn-acessibilidade" aria-pressed="false">+ Clique aqui para aumentar o tamanho do texto</button>
+            </div>
+
+            <!-- Botão do menu no celular -->
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
+                <span aria-hidden="true">☰</span>
+            </button>
+
+            <!-- Menu principal -->
+            <nav class="menu-container" id="menu-principal" aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="impacto.html">Impacto</a></li>
+                    <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="midia.html" aria-current="page">Mídia</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="conteudo" class="container secao">
+        <section aria-labelledby="titulo-midia">
+            <p class="etiqueta">VEJA E OUÇA</p>
+            <h1 id="titulo-midia">Recursos multimídia</h1>
+
+            <article>
+                <h2>Apresentação institucional (vídeo)</h2>
+                <p>Conheça em poucos minutos como a EcoLógica une energia limpa e acessibilidade.</p>
+                <video controls preload="metadata" poster="img/poster-video.jpg" class="midia-responsiva">
+                    <source src="assets/videoapresentacao.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeo. <a href="assets/videoapresentacao.mp4">Baixe o vídeo</a>.
+                </video>
+            </article>
+
+            <article>
+                <h2>Podcast EcoLógica (áudio)</h2>
+                <p>Episódio sobre eficiência energética, energia solar e inclusão no ambiente de trabalho.</p>
+                <audio controls preload="metadata" class="midia-responsiva">
+                    <source src="assets/podcast.m4a" type="audio/mp4">
+                    Seu navegador não suporta áudio. <a href="assets/podcast.m4a">Baixe o podcast</a>.
+                </audio>
+            </article>
+
+            <article>
+                <h2>Nossa localização (mapa)</h2>
+                <p>Avenida Paulista, 2020 - Bela Vista, São Paulo - SP (endereço fictício).</p>
+                <div class="iframe-responsivo">
+                    <iframe
+                        src="https://www.google.com/maps?q=Avenida+Paulista,+2020,+S%C3%A3o+Paulo+-+SP&amp;output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen
+                        title="Mapa com a localização da sede da EcoLógica Soluções na Avenida Paulista">
+                    </iframe>
+                </div>
+            </article>
+        </section>
+    </main>
+
+
+    <footer class="rodape">
+        <p>
+            © <span id="ano-atual">2026</span> EcoLógica Soluções.
+            Todos os direitos reservados.
+        </p>
+        <p>Energia consciente. Futuro sustentável.</p>
+    </footer>
+</body>
+</html>

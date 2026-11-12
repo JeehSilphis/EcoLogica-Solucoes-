@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dados, tabelas e resultados de sustentabilidade e inclusão da EcoLógica Soluções, com fontes.">
+    <title>Impacto | EcoLógica Soluções</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="css/style1.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+    <header class="cabecalho">
+        <!-- LADO ESQUERDO: Logotipo -->
+        <div class="logo-container">
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="EcoLógica Soluções - ir para a página inicial" class="img-logo" width="500" height="500">
+            </a>
+        </div>
+
+        <!-- LADO DIREITO: Acessibilidade + Menu -->
+        <div class="bloco-direita">
+
+            <!-- Ferramentas de acessibilidade -->
+            <div class="acessibilidade-container">
+                <button type="button" id="btn-daltonismo" class="btn-acessibilidade" aria-pressed="false">Daltônicos, clique aqui para ajuste de cores</button>
+                <button type="button" id="btn-leitor" class="btn-acessibilidade" aria-pressed="false">🔊 Clique aqui para ouvir a página</button>
+                <button type="button" id="btn-zoom" class="btn-acessibilidade" aria-pressed="false">+ Clique aqui para aumentar o tamanho do texto</button>
+            </div>
+
+            <!-- Botão do menu no celular -->
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
+                <span aria-hidden="true">☰</span>
+            </button>
+
+            <!-- Menu principal -->
+            <nav class="menu-container" id="menu-principal" aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="impacto.html" aria-current="page">Impacto</a></li>
+                    <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="midia.html">Mídia</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="conteudo" class="container secao">
+        <section aria-labelledby="titulo-impacto">
+            <p class="etiqueta">RESULTADOS</p>
+            <h1 id="titulo-impacto">Nosso impacto em números</h1>
+            <p>Acompanhe os resultados alcançados pela EcoLógica e o contexto nacional que motiva o nosso trabalho.</p>
+
+            <h2>Resultados da EcoLógica em 2025</h2>
+            <div class="tabela-responsiva">
+                <table>
+                    <caption>Metas e resultados de sustentabilidade e inclusão - 2025</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Indicador</th>
+                            <th scope="col">Meta</th>
+                            <th scope="col">Alcançado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Redução de CO₂ (toneladas)</th>
+                            <td>500</td>
+                            <td>620</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Empresas adaptadas para acessibilidade</th>
+                            <td>15</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Sistemas solares instalados</th>
+                            <td>30</td>
+                            <td>34</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Economia média na conta de energia dos clientes</th>
+                            <td>20%</td>
+                            <td>23%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="fonte">Fonte: relatório interno EcoLógica Soluções 2025 (dados fictícios, criados para este projeto acadêmico).</p>
+
+            <h2>Contexto nacional</h2>
+            <div class="tabela-responsiva">
+                <table>
+                    <caption>Dados públicos sobre energia e pessoas com deficiência no Brasil</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Dado</th>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Fonte</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Participação de fontes renováveis na matriz elétrica brasileira (2023)</th>
+                            <td>89,2%</td>
+                            <td><a href="https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/balanco-energetico-nacional-ben">EPE - Balanço Energético Nacional 2024</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Pessoas com deficiência no Brasil (2 anos ou mais, 2022)</th>
+                            <td>18,6 milhões (8,9% da população)</td>
+                            <td><a href="https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/37317-pessoas-com-deficiencia-tem-menor-acesso-a-educacao-ao-trabalho-e-a-renda">IBGE - PNAD Contínua 2022</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <article>
+                <h2>O que esses números mostram</h2>
+                <p>Mesmo com uma matriz elétrica majoritariamente renovável, o Brasil ainda desperdiça energia em edificações e precisa ampliar a geração distribuída, como a solar. Ao mesmo tempo, milhões de pessoas com deficiência enfrentam barreiras físicas e digitais. Por isso a EcoLógica trata sustentabilidade e inclusão como partes do mesmo projeto.</p>
+            </article>
+        </section>
+    </main>
+
+
+    <footer class="rodape">
+        <p>
+            © <span id="ano-atual">2026</span> EcoLógica Soluções.
+            Todos os direitos reservados.
+        </p>
+        <p>Energia consciente. Futuro sustentável.</p>
+    </footer>
+</body>
+</html>
