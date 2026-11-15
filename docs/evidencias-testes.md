@@ -30,15 +30,15 @@ Outras verificações automáticas feitas no código (12/11/2026): todas as tags
 | Teste | Resultado esperado | OK? |
 |---|---|---|
 | Tab na primeira vez | Aparece o link "Pular para o conteúdo principal" | ✅ `teclado-1-pular-conteudo.png` |
-| Enter no link de pular | Foco vai para o conteúdo da página | ☐ |
+| Enter no link de pular | Foco vai para o conteúdo da página | ✅ endereço muda para #conteudo e o Tab seguinte vai para "Conheça nossos projetos", dentro do conteúdo |
 | Tab pelos botões de acessibilidade e menu | Contorno amarelo visível em cada item | ✅ `teclado-2-foco-menu.png` (foco em "Sobre") |
-| Enter em um item do menu | Abre a página correspondente | ☐ |
-| No celular: Enter no botão ☰ e Esc | Menu abre e fecha; foco volta ao botão | ☐ |
-| Formulário só com teclado | Todos os campos alcançáveis; Espaço marca a caixa LGPD | ☐ |
+| Enter em um item do menu | Abre a página correspondente | ✅ "Sobre" alcançado com 7 Tabs; Enter abriu sobre.html |
+| No celular: Enter no botão ☰ e Esc | Menu abre e fecha; foco volta ao botão | ✅ `teclado-4-menu-celular-aberto.png`; Esc fechou e o foco voltou ao ☰ |
+| Formulário só com teclado | Todos os campos alcançáveis; Espaço marca a caixa LGPD | ✅ `teclado-5-formulario-so-teclado.png`; ordem: nome, e-mail, telefone, data (dia, mês e ano), funcionários, serviço (seta para baixo), mensagem, LGPD (Espaço) e botão (Enter) |
 | Notícias: Enter em "Clique para ler" | Texto completo abre e fecha | ✅ `teclado-3-noticia-aberta-com-enter.png` |
-| Mídia: Tab até o vídeo e Espaço | Vídeo e áudio tocam e pausam | ☐ |
+| Mídia: Tab até o vídeo e Espaço | Vídeo e áudio tocam e pausam | ✅ Espaço tocou e pausou o vídeo; no podcast, Espaço tocou o áudio |
 
-Os itens ainda marcados com ☐ devem ser testados à mão durante o ensaio da apresentação (Tab, Enter e Esc).
+Testes feitos em 15/11/2026 no site publicado (https://ecologica.up.railway.app), usando apenas teclas (Tab, Enter, Esc, Espaço e setas) enviadas ao navegador Chrome: 8 de 8 aprovados.
 
 ## 3. Contraste (WebAIM Contrast Checker - https://webaim.org/resources/contrastchecker/)
 
@@ -72,12 +72,12 @@ Prints do site publicado (A06):
 
 | Teste | Resultado esperado | OK? |
 |---|---|---|
-| Enviar vazio | Navegador mostra "Digite seu nome completo..." e para no 1º campo | ☐ |
+| Enviar vazio | Navegador mostra "Digite seu nome completo..." e para no 1º campo | ✅ envio bloqueado; foco foi para "Nome completo" com a mensagem "Digite seu nome completo usando apenas letras (mínimo de 3)." |
 | Nome com números ("Maria 123") | Mensagem de erro do nome | ✅ `formulario-1-erro-campos.png` |
 | E-mail sem @ | Mensagem de e-mail inválido | ✅ `formulario-1-erro-campos.png` |
 | Telefone com 4 dígitos | Mensagem pedindo 10 ou 11 dígitos | ✅ `formulario-1-erro-campos.png` |
-| Data no passado | Não é aceita (mínimo = hoje) | ☐ |
-| Funcionários = 0 | Mensagem pedindo número a partir de 1 | ☐ |
+| Data no passado | Não é aceita (mínimo = hoje) | ✅ 14/11/2026 recusada (mínimo 15/11/2026), mensagem "Escolha uma data a partir de hoje." |
+| Funcionários = 0 | Mensagem pedindo número a partir de 1 | ✅ valor 0 recusado, mensagem "Informe um número de funcionários a partir de 1." |
 | Tudo correto | Mensagem verde "Obrigado, ...!" e formulário limpo | ✅ `formulario-3-envio-correto.png` |
 
 Ao enviar com erro, os campos inválidos ficam com borda amarela e aparece o aviso "Há campos com erro..." abaixo do botão (`formulario-2-erro-aviso.png`). Teste automatizado (12/11/2026): nome "Maria 123" foi bloqueado com a mensagem em português; preenchimento correto exibiu a mensagem de sucesso; data mínima ficou igual à data do dia.
