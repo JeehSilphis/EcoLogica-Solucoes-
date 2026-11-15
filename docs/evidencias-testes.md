@@ -1,14 +1,12 @@
 # Evidências de testes
 
-> Prints tirados do **site publicado** (https://ecologica-solucoes-production.up.railway.app) em 12/11/2026 e salvos em `docs/evidencias/`.
+> Prints tirados do **site publicado** em 12/11/2026 e salvos em `docs/evidencias/`. Em 15/11/2026 o domínio mudou para **https://ecologica.up.railway.app** (o antigo, ecologica-solucoes-production.up.railway.app, foi desativado) e os prints do W3C e do Railway foram refeitos com o endereço novo.
 
 ## 1. W3C Validator (HTML) - 10 páginas
 
-**Site publicado validado em 12/11/2026 (https://ecologica-solucoes-production.up.railway.app):** 0 erros e 0 avisos nas 10 páginas. Index, sobre, projetos, impacto e acessibilidade foram validadas no validator.w3.org online pela URL; as outras 5 páginas foram validadas pela URL publicada com o mesmo validador oficial rodando localmente (o site online limitou as consultas seguidas). 
+**Validação oficial em 15/11/2026 no https://validator.w3.org/nu/ (Nu Html Checker, vnu 26.11.14), pela URL publicada https://ecologica.up.railway.app:** as 10 páginas passaram com **0 erros e 0 avisos** ("Document checking completed. No errors or warnings to show.").
 
-**Sobre os prints:** no dia 12/11 o validator.w3.org estava bloqueando as consultas com uma verificação anti-robô (Cloudflare, erro 429), então os prints foram feitos com o **mesmo validador do W3C (Nu Html Checker, vnu 26.11.9) rodando localmente**, validando cada página **pela URL publicada no Railway**. A interface e o resultado são os mesmos do validator.w3.org/nu. Para mostrar ao vivo, use https://validator.w3.org/nu/ com a URL do site.
-
-Como testar: acessar https://validator.w3.org/ → aba **Validate by URI** → colar o endereço de cada página publicada no Railway → **Check**.
+Como repetir: acessar https://validator.w3.org/ → aba **Validate by URI** → colar o endereço de cada página → **Check**. O validator.w3.org tem proteção anti-robô (Cloudflare) e pode pedir "Confirme que é humano" ou bloquear muitas consultas seguidas; nesse caso, valide uma página por vez.
 
 | Página | Resultado | Print |
 |---|---|---|
@@ -99,4 +97,4 @@ Ao enviar com erro, os campos inválidos ficam com borda amarela e aparece o avi
 
 | Item | Print |
 |---|---|
-| Serviço com deploy ACTIVE, "Deployment successful" e domínio público ecologica-solucoes-production.up.railway.app | ✅ `railway-deploy-ativo.png` |
+| Serviço com deploy ACTIVE e "Deployment successful" | ✅ `railway-deploy-ativo.png` (print de 12/11, ainda com o domínio antigo; refazer com https://ecologica.up.railway.app) |

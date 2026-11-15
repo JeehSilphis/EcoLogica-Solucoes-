@@ -48,3 +48,9 @@ Registro das decisões, aprendizados, dificuldades e soluções da Atividade A05
 * **Dificuldade:** o endereço principal (/) dava erro 404, porque o servidor `serve` estava configurado sem "cleanUrls" e sem listagem de pastas, então não procurava o index.html.
 * **Solução:** regra de rewrite de "/" para "/index.html" no `serve.json`; o Railway publicou a correção sozinho após o `git push`.
 * **Testes no site publicado:** as 10 páginas, CSS, JS, imagens, vídeo e podcast responderam sem erro; formulário validado; layout no celular conferido; W3C sem erros.
+
+### 15/11/2026 - Novo domínio e nova validação no W3C
+* **Decisão:** o domínio gerado pelo Railway foi trocado por um endereço mais curto e fácil de apresentar: **https://ecologica.up.railway.app** (Settings > Networking). O endereço antigo (ecologica-solucoes-production.up.railway.app) deixou de funcionar.
+* **Atividade:** URLs atualizadas nos READMEs e na documentação; as 10 páginas validadas de novo no validator.w3.org pela URL nova.
+* **Dificuldade:** o validator.w3.org usa proteção anti-robô (Cloudflare) e bloqueia muitas validações seguidas (erro 429).
+* **Solução:** validar uma página por vez, com intervalo entre elas, depois de passar pela verificação "Confirme que é humano".
