@@ -97,4 +97,4 @@ Ao enviar com erro, os campos inválidos ficam com borda amarela e aparece o avi
 
 | Item | Print |
 |---|---|
-| Serviço com deploy ACTIVE e "Deployment successful" | ✅ `railway-deploy-ativo.png` (print de 12/11, ainda com o domínio antigo; refazer com https://ecologica.up.railway.app) |
+| Serviço Online, deploy ACTIVE, "Deployment successful" e domínio público ecologica.up.railway.app (15/11/2026) | ✅ `railway-deploy-ativo.png` |
