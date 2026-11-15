@@ -29,11 +29,11 @@ body {
     margin: 0;
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5625rem; /* 25px, em rem para o botão de zoom funcionar */
+    font-size: 25px;
     line-height: 1.8;
     color: var(--texto);
     background-color: var(--fundo);
-    background-image: url("../img/energia-limpa.jpg");
+    background-image: url("./energia-limpa.jpg");
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -151,7 +151,7 @@ p {
 }
 
 .img-logo {
-    max-height: 220px;
+    max-height: 300px; 
     width: auto;
     display: block;
 }
@@ -248,7 +248,7 @@ body.modo-daltonismo {
     --foco: #FF7F00;         
     
     /* Aplica a camada azul sobre a imagem de fundo */
-    background-image: linear-gradient(rgba(0, 63, 122, 0.45), rgba(0, 63, 122, 0.45)), url("../img/energia-limpa.jpg");
+    background-image: linear-gradient(rgba(0, 63, 122, 0.45), rgba(0, 63, 122, 0.45)), url("./energia-limpa.jpg");
 }
 
 /* Transforma o logotipo para azul */
@@ -562,7 +562,7 @@ form .botao {
 /* Celulares */
 @media (max-width: 480px) {
     body {
-        font-size: 1.125rem;
+        font-size: 18px;
         line-height: 1.8;
     }
 
@@ -635,49 +635,5 @@ form .botao {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
-    }
-}
-/* ========================================
-   AJUSTES A06 - PÁGINA INICIAL
-======================================== */
-
-.painel {
-    padding: 2.5rem;
-    border-radius: 14px;
-    background: rgba(13, 53, 37, 0.92);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-}
-
-.titulo-faixa {
-    display: inline-block;
-    padding: 0.5rem 1.5rem;
-    border-radius: 10px;
-    background: rgba(13, 53, 37, 0.92);
-}
-
-.chamada {
-    margin-top: 2.5rem;
-    text-align: center;
-}
-
-.menu-container ul a[aria-current="page"] {
-    background-color: var(--verde-escuro);
-    color: var(--branco);
-    border-color: var(--foco);
-}
-
-body.modo-daltonismo .painel,
-body.modo-daltonismo .titulo-faixa,
-body.modo-daltonismo .cartao {
-    background: rgba(0, 63, 122, 0.92);
-}
-
-@media (max-width: 850px) {
-    .img-logo {
-        max-height: 140px;
-    }
-
-    .painel {
-        padding: 1.5rem;
     }
 }
