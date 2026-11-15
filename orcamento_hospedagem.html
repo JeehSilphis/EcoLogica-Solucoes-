@@ -6,38 +6,36 @@
     <meta name="description" content="Relatório comparativo de hospedagem e domínio do site EcoLógica Soluções, com a justificativa da escolha do Railway.">
     <title>Orçamento de Hospedagem e Domínio | EcoLógica Soluções</title>
     <link rel="icon" href="img/logo.png" type="image/png">
-    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/estilo.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
 
     <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
 
-    <header class="cabecalho">
-        <!-- LADO ESQUERDO: Logotipo -->
-        <div class="logo-container">
-            <a class="logo" href="index.html">
-                <img src="img/logo.png" alt="EcoLógica Soluções - ir para a página inicial" class="img-logo" width="500" height="500">
-            </a>
+    <div class="barra-acessibilidade" role="region" aria-label="Recursos de acessibilidade">
+        <div class="container barra-conteudo">
+            <span class="barra-titulo">Acessibilidade</span>
+            <button type="button" id="btn-leitor" class="btn-a11y" aria-pressed="false"><span aria-hidden="true">🔊</span> <span class="rotulo">Ouvir página</span></button>
+            <button type="button" id="btn-parar" class="btn-a11y" hidden><span aria-hidden="true">⏹</span> Parar</button>
+            <button type="button" id="btn-diminuir" class="btn-a11y">A− <span class="rotulo-longo">Diminuir texto</span></button>
+            <button type="button" id="btn-aumentar" class="btn-a11y">A+ <span class="rotulo-longo">Aumentar texto</span></button>
+            <button type="button" id="btn-contraste" class="btn-a11y" aria-pressed="false"><span aria-hidden="true">◐</span> <span class="rotulo-longo">Alto contraste</span></button>
+            <button type="button" id="btn-daltonismo" class="btn-a11y" aria-pressed="false"><span aria-hidden="true">🎨</span> <span class="rotulo-longo">Modo daltônico</span></button>
         </div>
+    </div>
 
-        <!-- LADO DIREITO: Acessibilidade + Menu -->
-        <div class="bloco-direita">
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="EcoLógica Soluções - página inicial" width="500" height="500">
+            </a>
 
-            <!-- Ferramentas de acessibilidade -->
-            <div class="acessibilidade-container">
-                <button type="button" id="btn-daltonismo" class="btn-acessibilidade" aria-pressed="false">Daltônicos, clique aqui para ajuste de cores</button>
-                <button type="button" id="btn-leitor" class="btn-acessibilidade" aria-pressed="false">🔊 Clique aqui para ouvir a página</button>
-                <button type="button" id="btn-zoom" class="btn-acessibilidade" aria-pressed="false">+ Clique aqui para aumentar o tamanho do texto</button>
-            </div>
-
-            <!-- Botão do menu no celular -->
-            <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
-                <span aria-hidden="true">☰</span>
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu-principal">
+                <span aria-hidden="true">☰</span> Menu
             </button>
 
-            <!-- Menu principal -->
-            <nav class="menu-container" id="menu-principal" aria-label="Menu principal">
+            <nav class="menu" id="menu-principal" aria-label="Menu principal">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
@@ -51,167 +49,190 @@
                     <li><a href="orcamento_hospedagem.html" aria-current="page">Orçamento</a></li>
                 </ul>
             </nav>
-
         </div>
     </header>
 
     <main id="conteudo" class="container secao">
         <section aria-labelledby="titulo-orcamento">
-            <p class="etiqueta">TRANSPARÊNCIA</p>
-            <h1 id="titulo-orcamento">Orçamento de hospedagem e domínio</h1>
-            <p>Comparamos três serviços de hospedagem e três registradores de domínio para escolher a melhor infraestrutura para o site. Valores consultados nos sites oficiais em 15 de novembro de 2026; preços em dólar variam com o câmbio (cotação usada: US$ 1 = R$ 5,50).</p>
+            <div class="topo-pagina">
+                <p class="etiqueta">TRANSPARÊNCIA</p>
+                <h1 id="titulo-orcamento">Orçamento de hospedagem e domínio</h1>
+            </div>
 
-            <h2>Comparativo de hospedagem</h2>
+            <p>Comparamos três serviços de hospedagem e três registradores de domínio para escolher a infraestrutura do site. Os preços foram consultados nos sites oficiais em 15 de novembro de 2026. Valores em dólar convertidos com US$ 1 = R$ 5,50.</p>
+
+            <div class="resumo-orcamento">
+                <div class="cartao">
+                    <h2>Hospedagem escolhida</h2>
+                    <p class="valor">Railway</p>
+                    <p>US$ 5 por mês (cerca de R$ 330 por ano)</p>
+                </div>
+                <div class="cartao">
+                    <h2>Domínio escolhido</h2>
+                    <p class="valor">Registro.br</p>
+                    <p>ecologica.tec.br por R$ 40 por ano</p>
+                </div>
+                <div class="cartao">
+                    <h2>Desenvolvimento</h2>
+                    <p class="valor">R$ 4.500</p>
+                    <p>pagamento único, mais cerca de R$ 400 por ano de infraestrutura</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bloco" aria-labelledby="titulo-hospedagem">
+            <h2 id="titulo-hospedagem">1. Comparativo de hospedagem</h2>
             <div class="tabela-responsiva">
                 <table>
-                    <caption>Três opções de hospedagem para site estático</caption>
+                    <caption>Três opções de hospedagem para site estático (a coluna destacada é a escolhida)</caption>
                     <thead>
                         <tr>
                             <th scope="col">Critério</th>
-                            <th scope="col">Railway (escolhido)</th>
+                            <th scope="col" class="escolhido">Railway (escolhido)</th>
                             <th scope="col">Vercel</th>
                             <th scope="col">Netlify</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">Plano analisado</th>
-                            <td>Hobby</td>
-                            <td>Pro</td>
-                            <td>Pro</td>
+                            <th scope="row">Plano pago analisado</th>
+                            <td class="escolhido" data-rotulo="Railway (escolhido)">Hobby</td>
+                            <td data-rotulo="Vercel">Pro</td>
+                            <td data-rotulo="Netlify">Pro</td>
                         </tr>
                         <tr>
-                            <th scope="row">Custo mensal aproximado</th>
-                            <td>US$ 5 (≈ R$ 27,50)</td>
-                            <td>US$ 20 por desenvolvedor (≈ R$ 110)</td>
-                            <td>US$ 20 com membros ilimitados (≈ R$ 110)</td>
+                            <th scope="row">Custo por mês</th>
+                            <td class="escolhido" data-rotulo="Railway (escolhido)">US$ 5 (≈ R$ 27,50)</td>
+                            <td data-rotulo="Vercel">US$ 20 por desenvolvedor (≈ R$ 110)</td>
+                            <td data-rotulo="Netlify">US$ 20 com membros ilimitados (≈ R$ 110)</td>
                         </tr>
                         <tr>
-                            <th scope="row">Custo anual aproximado</th>
-                            <td>≈ R$ 330</td>
-                            <td>≈ R$ 1.320</td>
-                            <td>≈ R$ 1.320</td>
+                            <th scope="row">Custo por ano</th>
+                            <td class="escolhido" data-rotulo="Railway (escolhido)">≈ R$ 330</td>
+                            <td data-rotulo="Vercel">≈ R$ 1.320</td>
+                            <td data-rotulo="Netlify">≈ R$ 1.320</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Plano gratuito</th>
+                            <td class="escolhido" data-rotulo="Railway (escolhido)">Free: 30 dias com US$ 5 de crédito, depois US$ 1 por mês</td>
+                            <td data-rotulo="Vercel">Hobby: apenas uso pessoal</td>
+                            <td data-rotulo="Netlify">Free: com limites de uso</td>
                         </tr>
                         <tr>
                             <th scope="row">HTTPS (certificado SSL)</th>
-                            <td>Automático e gratuito</td>
-                            <td>Automático e gratuito</td>
-                            <td>Automático e gratuito</td>
+                            <td class="escolhido" data-rotulo="Railway (escolhido)">Automático e gratuito</td>
+                            <td data-rotulo="Vercel">Automático e gratuito</td>
+                            <td data-rotulo="Netlify">Automático e gratuito</td>
                         </tr>
                         <tr>
                             <th scope="row">Deploy automático pelo GitHub</th>
-                            <td>Sim</td>
-                            <td>Sim</td>
-                            <td>Sim</td>
+                            <td class="escolhido" data-rotulo="Railway (escolhido)">Sim</td>
+                            <td data-rotulo="Vercel">Sim</td>
+                            <td data-rotulo="Netlify">Sim</td>
                         </tr>
                         <tr>
-                            <th scope="row">Permite back-end e banco de dados no futuro</th>
-                            <td>Sim (Node, Python, PostgreSQL etc.)</td>
-                            <td>Parcial (funções serverless)</td>
-                            <td>Parcial (funções serverless)</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Limite de gastos configurável</th>
-                            <td>Sim</td>
-                            <td>Sim</td>
-                            <td>Sim</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Uso comercial no plano gratuito</th>
-                            <td>Plano Free para testes (30 dias com US$ 5 de crédito, depois US$ 1/mês)</td>
-                            <td>Hobby gratuito, apenas para uso pessoal</td>
-                            <td>Free gratuito, com limites de uso</td>
+                            <th scope="row">Back-end e banco de dados no futuro</th>
+                            <td class="escolhido" data-rotulo="Railway (escolhido)">Sim (Node, Python, PostgreSQL etc.)</td>
+                            <td data-rotulo="Vercel">Parcial (funções serverless)</td>
+                            <td data-rotulo="Netlify">Parcial (funções serverless)</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+        </section>
 
-            <h2>Comparativo de domínio</h2>
+        <section class="bloco" aria-labelledby="titulo-dominio">
+            <h2 id="titulo-dominio">2. Comparativo de domínio</h2>
             <div class="tabela-responsiva">
                 <table>
-                    <caption>Três opções de registro de domínio</caption>
+                    <caption>Três opções de registro de domínio (a linha destacada é a escolhida)</caption>
                     <thead>
                         <tr>
                             <th scope="col">Registrador</th>
                             <th scope="col">Domínio</th>
-                            <th scope="col">Custo anual aproximado</th>
+                            <th scope="col">Preço</th>
                             <th scope="col">Observação</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">Registro.br (escolhido)</th>
-                            <td>ecologica.tec.br</td>
-                            <td>R$ 40,00</td>
-                            <td>Órgão oficial brasileiro; mesmo preço na renovação; pagamento em reais.</td>
+                            <th scope="row" class="escolhido">Registro.br (escolhido)</th>
+                            <td class="escolhido" data-rotulo="Domínio">ecologica.tec.br</td>
+                            <td class="escolhido" data-rotulo="Preço">R$ 40,00 por ano</td>
+                            <td class="escolhido" data-rotulo="Observação">Órgão oficial brasileiro; mesmo preço na renovação; pagamento em reais.</td>
                         </tr>
                         <tr>
                             <th scope="row">Hostinger</th>
-                            <td>ecologicasolucoes.com</td>
-                            <td>R$ 0,01 no 1º ano (só no plano de 3 anos)</td>
-                            <td>Preço promocional; depois cobra a renovação padrão, mais cara e não informada na página de oferta.</td>
+                            <td data-rotulo="Domínio">ecologicasolucoes.com</td>
+                            <td data-rotulo="Preço">R$ 0,01 no 1º ano (só no plano de 3 anos)</td>
+                            <td data-rotulo="Observação">Preço promocional; depois cobra a renovação padrão, mais cara e não informada na oferta.</td>
                         </tr>
                         <tr>
                             <th scope="row">GoDaddy</th>
-                            <td>ecologicasolucoes.com</td>
-                            <td>R$ 64,99 no 1º ano; R$ 109,99 na renovação</td>
-                            <td>Empresa internacional; ofertas de serviços adicionais pagos.</td>
+                            <td data-rotulo="Domínio">ecologicasolucoes.com</td>
+                            <td data-rotulo="Preço">R$ 64,99 no 1º ano; R$ 109,99 na renovação</td>
+                            <td data-rotulo="Observação">Empresa internacional; oferece serviços adicionais pagos.</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+        </section>
 
-            <article>
-                <h2>Justificativa da escolha</h2>
+        <section class="bloco" aria-labelledby="titulo-justificativa">
+            <h2 id="titulo-justificativa">3. Justificativa da escolha</h2>
+            <div class="painel">
                 <ul>
-                    <li><strong>Hospedagem - Railway:</strong> menor custo entre os planos pagos analisados, HTTPS automático, deploy automático a cada atualização no GitHub, limite de gastos e possibilidade de adicionar back-end e banco de dados no futuro (por exemplo, para salvar os contatos do formulário).</li>
-                    <li><strong>Domínio - Registro.br (.tec.br):</strong> menor custo a partir do 2º ano (R$ 40 contra R$ 109,99 da GoDaddy), sem aumento na renovação, cobrança em reais e extensão ligada a tecnologia, combinando com a proposta da empresa.</li>
+                    <li><strong>Railway:</strong> menor custo entre os planos pagos, HTTPS automático, deploy automático a cada atualização no GitHub, limite de gastos e possibilidade de adicionar back-end e banco de dados no futuro (por exemplo, para salvar os contatos do formulário).</li>
+                    <li><strong>Registro.br (.tec.br):</strong> menor custo a partir do 2º ano (R$ 40 contra R$ 109,99 da GoDaddy), sem aumento na renovação, cobrança em reais e extensão ligada a tecnologia.</li>
                     <li><strong>Sustentabilidade:</strong> um site estático e leve consome menos recursos de servidor e de rede, o que reduz o consumo de energia.</li>
                 </ul>
                 <p><strong>Custo anual de infraestrutura:</strong> cerca de R$ 330 (Railway) + R$ 40 (domínio) = <strong>≈ R$ 370 por ano</strong>. Prevemos R$ 400 por ano para cobrir IOF e variação do dólar.</p>
-            </article>
+            </div>
+        </section>
 
-            <h2>Proposta comercial de desenvolvimento</h2>
+        <section class="bloco" aria-labelledby="titulo-proposta">
+            <h2 id="titulo-proposta">4. Proposta comercial de desenvolvimento</h2>
             <div class="tabela-responsiva">
-                <table class="tabela-orcamento">
+                <table>
                     <caption>Serviços de desenvolvimento e custos</caption>
                     <thead>
                         <tr>
                             <th scope="col">Serviço</th>
                             <th scope="col">Tecnologias</th>
-                            <th scope="col">Valor (R$)</th>
+                            <th scope="col">Valor</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Desenvolvimento front-end e publicação</strong><br>10 páginas responsivas, navegação unificada, semântica HTML5, configuração do Git e deploy no Railway.</td>
-                            <td>HTML5, CSS3, JavaScript, Git</td>
-                            <td>R$ 3.000,00</td>
+                            <th scope="row">Desenvolvimento front-end e publicação: 10 páginas responsivas, semântica HTML5, Git e deploy no Railway</th>
+                            <td data-rotulo="Tecnologias">HTML5, CSS3, JavaScript, Git</td>
+                            <td data-rotulo="Valor">R$ 3.000,00</td>
                         </tr>
                         <tr>
-                            <td><strong>Módulo de acessibilidade</strong><br>Modo para daltônicos, leitura em voz (Web Speech API), aumento de texto e preferências salvas no navegador.</td>
-                            <td>JavaScript (Web Speech API, LocalStorage), ARIA</td>
-                            <td>R$ 1.500,00</td>
+                            <th scope="row">Módulo de acessibilidade: leitura em voz, alto contraste, modo para daltônicos e aumento de texto</th>
+                            <td data-rotulo="Tecnologias">JavaScript (Web Speech API, LocalStorage), ARIA</td>
+                            <td data-rotulo="Valor">R$ 1.500,00</td>
                         </tr>
                         <tr>
-                            <td><strong>Infraestrutura anual</strong><br>Hospedagem Railway + domínio Registro.br.</td>
-                            <td>Railway, Registro.br</td>
-                            <td>R$ 400,00 / ano</td>
+                            <th scope="row">Infraestrutura anual: hospedagem Railway e domínio Registro.br</th>
+                            <td data-rotulo="Tecnologias">Railway, Registro.br</td>
+                            <td data-rotulo="Valor">R$ 400,00 por ano</td>
                         </tr>
                         <tr>
-                            <td><strong>Suporte e manutenção (opcional)</strong><br>Monitoramento, atualizações de segurança e pequenos ajustes de conteúdo.</td>
-                            <td>-</td>
-                            <td>R$ 1.200,00 / ano</td>
+                            <th scope="row">Suporte e manutenção (opcional): monitoramento, segurança e ajustes de conteúdo</th>
+                            <td data-rotulo="Tecnologias">-</td>
+                            <td data-rotulo="Valor">R$ 1.200,00 por ano</td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
                             <th scope="row" colspan="2">Total do desenvolvimento (pagamento único)</th>
-                            <td><strong>R$ 4.500,00</strong></td>
+                            <td>R$ 4.500,00</td>
                         </tr>
                     </tfoot>
                 </table>
             </div>
+            <p class="fonte">Fontes: <a href="https://railway.com/pricing">Railway</a>, <a href="https://vercel.com/pricing">Vercel</a>, <a href="https://www.netlify.com/pricing/">Netlify</a>, <a href="https://registro.br/dominio/">Registro.br</a>, <a href="https://www.hostinger.com/br/dominio-barato">Hostinger</a> e <a href="https://www.godaddy.com/pt-br">GoDaddy</a>, consultados em 15/11/2026.</p>
         </section>
     </main>
 

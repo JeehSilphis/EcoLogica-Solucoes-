@@ -6,38 +6,36 @@
     <meta name="description" content="Notícias e artigos sobre energia renovável, certificação ESG e acessibilidade da EcoLógica Soluções.">
     <title>Notícias | EcoLógica Soluções</title>
     <link rel="icon" href="img/logo.png" type="image/png">
-    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/estilo.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
 
     <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
 
-    <header class="cabecalho">
-        <!-- LADO ESQUERDO: Logotipo -->
-        <div class="logo-container">
-            <a class="logo" href="index.html">
-                <img src="img/logo.png" alt="EcoLógica Soluções - ir para a página inicial" class="img-logo" width="500" height="500">
-            </a>
+    <div class="barra-acessibilidade" role="region" aria-label="Recursos de acessibilidade">
+        <div class="container barra-conteudo">
+            <span class="barra-titulo">Acessibilidade</span>
+            <button type="button" id="btn-leitor" class="btn-a11y" aria-pressed="false"><span aria-hidden="true">🔊</span> <span class="rotulo">Ouvir página</span></button>
+            <button type="button" id="btn-parar" class="btn-a11y" hidden><span aria-hidden="true">⏹</span> Parar</button>
+            <button type="button" id="btn-diminuir" class="btn-a11y">A− <span class="rotulo-longo">Diminuir texto</span></button>
+            <button type="button" id="btn-aumentar" class="btn-a11y">A+ <span class="rotulo-longo">Aumentar texto</span></button>
+            <button type="button" id="btn-contraste" class="btn-a11y" aria-pressed="false"><span aria-hidden="true">◐</span> <span class="rotulo-longo">Alto contraste</span></button>
+            <button type="button" id="btn-daltonismo" class="btn-a11y" aria-pressed="false"><span aria-hidden="true">🎨</span> <span class="rotulo-longo">Modo daltônico</span></button>
         </div>
+    </div>
 
-        <!-- LADO DIREITO: Acessibilidade + Menu -->
-        <div class="bloco-direita">
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="EcoLógica Soluções - página inicial" width="500" height="500">
+            </a>
 
-            <!-- Ferramentas de acessibilidade -->
-            <div class="acessibilidade-container">
-                <button type="button" id="btn-daltonismo" class="btn-acessibilidade" aria-pressed="false">Daltônicos, clique aqui para ajuste de cores</button>
-                <button type="button" id="btn-leitor" class="btn-acessibilidade" aria-pressed="false">🔊 Clique aqui para ouvir a página</button>
-                <button type="button" id="btn-zoom" class="btn-acessibilidade" aria-pressed="false">+ Clique aqui para aumentar o tamanho do texto</button>
-            </div>
-
-            <!-- Botão do menu no celular -->
-            <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
-                <span aria-hidden="true">☰</span>
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu-principal">
+                <span aria-hidden="true">☰</span> Menu
             </button>
 
-            <!-- Menu principal -->
-            <nav class="menu-container" id="menu-principal" aria-label="Menu principal">
+            <nav class="menu" id="menu-principal" aria-label="Menu principal">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
@@ -51,14 +49,15 @@
                     <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
                 </ul>
             </nav>
-
         </div>
     </header>
 
     <main id="conteudo" class="container secao">
         <section aria-labelledby="titulo-noticias">
-            <p class="etiqueta">FIQUE POR DENTRO</p>
-            <h1 id="titulo-noticias">Notícias e atualizações</h1>
+            <div class="topo-pagina">
+                <p class="etiqueta">FIQUE POR DENTRO</p>
+                <h1 id="titulo-noticias">Notícias e atualizações</h1>
+            </div>
             <p>Acompanhe as últimas novidades da EcoLógica Soluções no mercado de sustentabilidade e acessibilidade.</p>
 
             <div class="lista-noticias">
