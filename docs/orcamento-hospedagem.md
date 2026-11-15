@@ -1,26 +1,27 @@
 # Orçamento de hospedagem e domínio
 
-Valores de referência consultados em novembro de 2026. Preços em dólar convertidos com US$ 1 = R$ 5,50 e podem variar com o câmbio e com mudanças de plano das empresas. **Confira os valores nos sites oficiais antes da apresentação.**
+Valores consultados nos sites oficiais em **15/11/2026** (railway.com/pricing, vercel.com/pricing, netlify.com/pricing, registro.br, hostinger.com/br e godaddy.com/pt-br). Preços em dólar convertidos com US$ 1 = R$ 5,50; podem variar com o câmbio e com mudanças de plano.
 
 ## Hospedagem (3 opções)
 
 | Critério | **Railway (escolhido)** | Vercel | Netlify |
 |---|---|---|---|
 | Plano analisado | Hobby | Pro | Pro |
-| Custo mensal | US$ 5 (≈ R$ 27,50) | US$ 20 por membro (≈ R$ 110) | US$ 19 a 20 por membro (≈ R$ 105 a 110) |
-| Custo anual | ≈ R$ 330 | ≈ R$ 1.320 | ≈ R$ 1.250 a 1.320 |
+| Custo mensal | US$ 5 (≈ R$ 27,50) | US$ 20 por desenvolvedor (≈ R$ 110) | US$ 20 com membros ilimitados (≈ R$ 110) |
+| Custo anual | ≈ R$ 330 | ≈ R$ 1.320 | ≈ R$ 1.320 |
 | HTTPS | Automático | Automático | Automático |
 | Deploy automático pelo GitHub | Sim | Sim | Sim |
 | Back-end e banco de dados no futuro | Sim | Parcial (serverless) | Parcial (serverless) |
 | Limite de gastos | Sim | Sim | Sim |
+| Plano gratuito | Free: 30 dias com US$ 5, depois US$ 1/mês (usado neste projeto acadêmico) | Hobby: só uso pessoal | Free: com limites de uso |
 
 ## Domínio (3 opções)
 
 | Registrador | Domínio | Custo anual | Observação |
 |---|---|---|---|
 | **Registro.br (escolhido)** | ecologica.tec.br | R$ 40,00 | Órgão oficial; mesmo preço na renovação |
-| Hostinger | ecologicasolucoes.com | ≈ R$ 60 (1º ano) | Promoção; renovação mais cara |
-| GoDaddy | ecologicasolucoes.com | ≈ R$ 90 (renovação) | Internacional; venda de adicionais |
+| Hostinger | ecologicasolucoes.com | R$ 0,01 no 1º ano (plano de 3 anos) | Promoção; renovação padrão mais cara, não informada na oferta |
+| GoDaddy | ecologicasolucoes.com | R$ 64,99 (1º ano) / R$ 109,99 (renovação) | Internacional; venda de adicionais |
 
 ## Justificativa
 

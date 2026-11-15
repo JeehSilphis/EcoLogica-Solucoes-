@@ -85,6 +85,7 @@ EcoLogica/
 * Escopo do projeto (A05): `EscopoEcoLogica.docx`
 * Detalhamento de custos: `custos.docx`
 * Apresentação do MVP: `Apresentacao-MVP-EcoLogica.pptx`
+* Apresentação final (A06, 17 slides): `Apresentacao-Final-EcoLogica.pptx` e `Apresentacao-Final-EcoLogica.pdf`
 * Prints de testes: pasta `evidencias/`
 * Código original do MVP (para comparação): pasta `mvp-codigo-original/`
 
