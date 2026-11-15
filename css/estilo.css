@@ -677,11 +677,16 @@ form .botao {
 /* ---------------------------------------------------------
    Leitor de tela: trecho sendo lido
 --------------------------------------------------------- */
-.lendo {
-    outline: 3px dashed var(--destaque);
-    outline-offset: 4px;
+.lendo,
+.lendo * {
     background: #fff7dd;
-    color: #1b1b1b;
+    color: #1b1b1b !important; /* texto escuro mesmo dentro das faixas escuras */
+}
+
+.lendo {
+    outline: 3px dashed #b45309;
+    outline-offset: 4px;
+    border-radius: 6px;
 }
 
 /* ---------------------------------------------------------
@@ -798,10 +803,19 @@ body.alto-contraste .campo textarea {
 body.alto-contraste tbody tr:nth-child(even),
 body.alto-contraste td.escolhido,
 body.alto-contraste .status-formulario.sucesso,
-body.alto-contraste .status-formulario.erro,
-body.alto-contraste .lendo {
+body.alto-contraste .status-formulario.erro {
     background: #000000;
     color: #ffff00;
+}
+
+body.alto-contraste .lendo,
+body.alto-contraste .lendo * {
+    background: #000000;
+    color: #ffff00 !important;
+}
+
+body.alto-contraste .lendo {
+    outline-color: #ffff00;
 }
 
 body.alto-contraste table,
