@@ -1,0 +1,817 @@
+/* ========================================
+   CONFIGURAÇÕES GERAIS - PÁGINAS INTERNAS
+======================================== */
+
+:root {
+    --verde-escuro: #164b36;
+    --verde: #23734f;
+    --verde-claro: #e8f4ec;
+    --fundo: #164b36;
+    --branco: #ffffff;
+    --texto: #ffffff;
+    --texto-suave: #ffffff;
+    --borda: #cbd8ce;
+    --foco: #ffbf47;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.125rem; /* 18px, em rem para o botão de zoom funcionar */
+    line-height: 1.8;
+    color: var(--texto);
+
+    background-color: var(--fundo);
+    background-image: url("../img/energia-limpa.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ========================================
+   ACESSIBILIDADE E FOCO
+======================================== */
+
+a {
+    color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 4px solid var(--foco);
+    outline-offset: 4px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    z-index: 1000;
+
+    padding: 1rem;
+    background: var(--branco);
+    color: var(--verde-escuro);
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+/* Regra para o botão de zoom (Acessibilidade Visual) */
+html.zoom-ativo {
+    font-size: 130% !important; /* Aumenta a base do site nas páginas internas também */
+}
+
+/* ========================================
+   TÍTULOS E TEXTOS
+======================================== */
+
+h1, h2, h3 {
+    line-height: 1.3;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 2.5rem; /* Proporcional para páginas internas */
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+p {
+    margin-bottom: 1.2rem;
+}
+
+.container,
+.secao-conteudo {
+    width: min(1120px, 90%);
+    margin-inline: auto;
+}
+
+.secao {
+    padding: 5rem 0;
+}
+
+.etiqueta {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+}
+
+/* ========================================
+   LAYOUT DO CABEÇALHO (LOGO ESQUERDA, BOTÕES DIREITA)
+======================================== */
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--branco);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Lado Esquerdo (Logotipo) */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.img-logo {
+    max-height: 180px;
+    width: auto;
+    display: block;
+}
+
+/* Lado Direito (Agrupa Acessibilidade e Menu) */
+.bloco-direita {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    gap: 1.5rem; 
+}
+
+/* Botões de Acessibilidade (No Topo) */
+.acessibilidade-container {
+    display: flex;
+    flex-direction: row; 
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.btn-acessibilidade {
+    margin: 0 !important;
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: var(--branco);
+    color: var(--verde-escuro);
+    border: 2px solid var(--verde-escuro);
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-acessibilidade:hover {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+}
+
+/* Botão Hambúrguer (Mobile) */
+.menu-toggle {
+    display: none;
+}
+
+/* Menu Principal (Na Base) - Distribuído igualmente com 1fr */
+.menu-container {
+    display: block; 
+    width: 100%;
+}
+
+.menu-container ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 1fr para ocuparem o mesmo espaço */
+    gap: 1rem 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.menu-container ul a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu-container ul a:hover {
+    background-color: var(--verde);
+    color: var(--branco);
+}
+
+/* ========================================
+   ARTIGOS E CONTEÚDO ESTRUTURADO
+======================================== */
+
+article {
+    background: rgba(22, 75, 54, 0.85); /* Fundo semi-transparente para legibilidade */
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+article ul {
+    margin-left: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+article li {
+    margin-bottom: 0.5rem;
+}
+
+/* ========================================
+   IMAGENS E GALERIA
+======================================== */
+
+figure {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+figcaption {
+    margin-top: 0.8rem;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #e8f4ec;
+}
+
+/* ========================================
+   MULTIMÍDIA
+======================================== */
+
+video, audio, iframe {
+    max-width: 100%;
+    display: block;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+/* ========================================
+   TABELAS (Orçamento e Impacto)
+======================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2.5rem;
+    background-color: rgba(22, 75, 54, 0.9);
+    color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table caption {
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: var(--verde);
+    padding: 15px;
+    color: #ffffff;
+    text-align: left;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid var(--borda);
+    text-align: left;
+}
+
+th {
+    background-color: #0d3525;
+    font-weight: bold;
+}
+
+/* ========================================
+   BOTÕES
+======================================== */
+
+.botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 56px;
+    padding: 0.9rem 1.5rem;
+
+    border: 2px solid transparent;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+.botao-principal {
+    background: var(--verde);
+    color: var(--branco);
+}
+
+.botao-principal:hover {
+    background: #0d3525;
+}
+
+/* ========================================
+   CONTATO E FORMULÁRIO
+======================================== */
+
+form {
+    padding: 2rem;
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    background: rgba(22, 75, 54, 0.9);
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.campo {
+    margin-bottom: 1.5rem;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    min-height: 54px;
+    padding: 0.85rem;
+    border: 1px solid #718176;
+    border-radius: 6px;
+    background: var(--branco);
+    color: #24332b;
+    font-family: inherit;
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.campo textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+form .botao {
+    width: 100%;
+}
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+.rodape {
+    padding: 2.5rem 5%;
+    background: var(--verde-escuro);
+    color: var(--branco);
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-top: 3rem;
+}
+
+.rodape p {
+    margin-bottom: 0.5rem;
+}
+
+/* ========================================
+   MODO DALTONISMO (PALETA AZUL E LARANJA)
+======================================== */
+
+body.modo-daltonismo {
+    --verde-escuro: #003F7A; 
+    --verde: #0066CC;        
+    --verde-claro: #E5F0FA;  
+    --fundo: #003F7A;        
+    --foco: #FF7F00;         
+    background-image: linear-gradient(rgba(0, 63, 122, 0.45), rgba(0, 63, 122, 0.45)), url("../img/energia-limpa.jpg");
+}
+
+/* Ajusta botões no modo daltónico */
+body.modo-daltonismo .btn-acessibilidade {
+    border-color: var(--foco);
+    color: var(--verde-escuro);
+}
+
+body.modo-daltonismo .menu-container ul a:hover {
+    background-color: var(--foco);
+    color: var(--branco);
+}
+
+/* Transforma o verde do logotipo em azul */
+body.modo-daltonismo .img-logo {
+    filter: hue-rotate(135deg) saturate(1.2);
+}
+
+/* Correção de fundos específicos de páginas internas */
+body.modo-daltonismo table,
+body.modo-daltonismo form,
+body.modo-daltonismo article {
+    background-color: rgba(0, 63, 122, 0.9);
+}
+
+body.modo-daltonismo th {
+    background-color: #001f3f; 
+}
+
+
+/* ========================================
+   RESPONSIVIDADE E MEDIA QUERIES
+======================================== */
+
+/* Notebooks Pequenos / Tablets Grandes */
+@media (max-width: 1100px) {
+    .cabecalho {
+        flex-direction: column; 
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .bloco-direita {
+        align-items: center;
+        width: 100%;
+    }
+    
+    .acessibilidade-container {
+        flex-direction: column; 
+        width: 100%;
+    }
+
+    .btn-acessibilidade {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Tablets (Menu Hamburger entra em ação) */
+@media (max-width: 850px) {
+    .menu-toggle {
+        display: block;
+        margin: 1rem auto;
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .menu-container {
+        display: none; 
+        width: 100%;
+    }
+
+    .menu-container.aberto {
+        display: block; 
+    }
+
+    .menu-container ul {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .menu-container ul a {
+        display: block;
+        padding: 0.8rem 0;
+        font-size: 1.125rem;
+        border-radius: 0; 
+        border-bottom: 1px solid var(--borda);
+        background-color: transparent;
+        text-align: left;
+    }
+    
+    .menu-container ul a:hover {
+        background-color: var(--verde-claro);
+        color: var(--verde-escuro);
+    }
+
+    .secao {
+        padding: 4rem 0;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    body {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .secao {
+        padding: 3rem 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    article {
+        padding: 1.5rem;
+    }
+
+    form {
+        padding: 1.2rem;
+    }
+
+    .campo input,
+    .campo select,
+    .campo textarea {
+        font-size: 1rem;
+    }
+
+    .rodape {
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   PREFERÊNCIA POR MOVIMENTO REDUZIDO
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ========================================
+   NOTÍCIAS E EXPANSÃO (LEIA MAIS)
+======================================== */
+
+.lista-noticias {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.data-noticia {
+    font-size: 0.9rem;
+    color: var(--verde-claro);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+/* Transforma o summary num link interativo */
+.link-leia-mais {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--foco); /* Cor de destaque (laranja) */
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.3s ease;
+}
+
+.link-leia-mais:hover {
+    color: var(--branco);
+}
+
+/* Formatação do texto que aparece após clicar */
+.conteudo-expandido {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--borda);
+    animation: aparecer 0.4s ease-out;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* ========================================
+   AJUSTES A06 - PÁGINAS INTERNAS
+======================================== */
+
+/* Painel escuro atrás do conteúdo para garantir contraste sobre a foto de fundo */
+main.secao > section {
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 14px;
+    background: rgba(13, 53, 37, 0.92);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+main.secao > section article {
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: none;
+}
+
+/* Menu: destaca a página atual */
+.menu-container ul a[aria-current="page"] {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    border-color: var(--foco);
+}
+
+/* Links dentro do conteúdo */
+main a:not(.botao) {
+    color: #ffe08a;
+    text-underline-offset: 3px;
+}
+
+main a:not(.botao):hover {
+    color: var(--branco);
+}
+
+/* Tabelas responsivas (rolagem lateral no celular) */
+.tabela-responsiva {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+.tabela-responsiva table {
+    min-width: 560px;
+    margin-bottom: 1rem;
+}
+
+tbody th {
+    background-color: transparent;
+    font-weight: 700;
+}
+
+tfoot th,
+tfoot td {
+    background-color: #0d3525;
+}
+
+.fonte {
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+/* Galeria em grade */
+.grade-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.grade-galeria img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+/* Multimídia responsiva */
+.midia-responsiva {
+    width: 100%;
+    max-width: 800px;
+}
+
+.iframe-responsivo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.iframe-responsivo iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+}
+
+/* Formulário */
+.ajuda {
+    display: block;
+    margin-top: 0.4rem;
+    font-size: 0.95rem;
+    color: #e8f4ec;
+}
+
+.campo-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.campo.campo-checkbox input {
+    width: 1.5rem;
+    min-height: 1.5rem;
+    margin-top: 0.3rem;
+    flex-shrink: 0;
+}
+
+.campo.campo-checkbox label {
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.campo input[aria-invalid="true"],
+.campo select[aria-invalid="true"] {
+    border: 3px solid #ffbf47;
+}
+
+.status-formulario {
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+.status-formulario.sucesso {
+    padding: 1rem;
+    border-radius: 8px;
+    background: #e8f4ec;
+    color: #164b36;
+}
+
+.status-formulario.erro {
+    padding: 1rem;
+    border-radius: 8px;
+    background: #fff4d6;
+    color: #5a3b00;
+}
+
+body.modo-daltonismo main.secao > section {
+    background: rgba(0, 63, 122, 0.92);
+}
+
+@media (max-width: 850px) {
+    .img-logo {
+        max-height: 120px;
+    }
+
+    main.secao > section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main.secao > section {
+        padding: 1rem;
+    }
+
+    .grade-galeria {
+        grid-template-columns: 1fr;
+    }
+}

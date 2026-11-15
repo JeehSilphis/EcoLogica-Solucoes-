@@ -6,36 +6,38 @@
     <meta name="description" content="Medidas de inclusão para pessoas com deficiência aplicadas no site e nos projetos da EcoLógica Soluções.">
     <title>Acessibilidade | EcoLógica Soluções</title>
     <link rel="icon" href="img/logo.png" type="image/png">
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/style1.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
 
     <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
 
-    <div class="barra-acessibilidade" role="region" aria-label="Recursos de acessibilidade">
-        <div class="container barra-conteudo">
-            <span class="barra-titulo">Acessibilidade</span>
-            <button type="button" id="btn-leitor" class="btn-a11y" aria-pressed="false"><span aria-hidden="true">🔊</span> <span class="rotulo">Ouvir página</span></button>
-            <button type="button" id="btn-parar" class="btn-a11y" hidden><span aria-hidden="true">⏹</span> Parar</button>
-            <button type="button" id="btn-diminuir" class="btn-a11y">A− <span class="rotulo-longo">Diminuir texto</span></button>
-            <button type="button" id="btn-aumentar" class="btn-a11y">A+ <span class="rotulo-longo">Aumentar texto</span></button>
-            <button type="button" id="btn-contraste" class="btn-a11y" aria-pressed="false"><span aria-hidden="true">◐</span> <span class="rotulo-longo">Alto contraste</span></button>
-            <button type="button" id="btn-daltonismo" class="btn-a11y" aria-pressed="false"><span aria-hidden="true">🎨</span> <span class="rotulo-longo">Modo daltônico</span></button>
-        </div>
-    </div>
-
     <header class="cabecalho">
-        <div class="container cabecalho-conteudo">
+        <!-- LADO ESQUERDO: Logotipo -->
+        <div class="logo-container">
             <a class="logo" href="index.html">
-                <img src="img/logo.png" alt="EcoLógica Soluções - página inicial" width="500" height="500">
+                <img src="img/logo.png" alt="EcoLógica Soluções - ir para a página inicial" class="img-logo" width="500" height="500">
             </a>
+        </div>
 
-            <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu-principal">
-                <span aria-hidden="true">☰</span> Menu
+        <!-- LADO DIREITO: Acessibilidade + Menu -->
+        <div class="bloco-direita">
+
+            <!-- Ferramentas de acessibilidade -->
+            <div class="acessibilidade-container">
+                <button type="button" id="btn-daltonismo" class="btn-acessibilidade" aria-pressed="false">Daltônicos, clique aqui para ajuste de cores</button>
+                <button type="button" id="btn-leitor" class="btn-acessibilidade" aria-pressed="false">🔊 Clique aqui para ouvir a página</button>
+                <button type="button" id="btn-zoom" class="btn-acessibilidade" aria-pressed="false">+ Clique aqui para aumentar o tamanho do texto</button>
+            </div>
+
+            <!-- Botão do menu no celular -->
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
+                <span aria-hidden="true">☰</span>
             </button>
 
-            <nav class="menu" id="menu-principal" aria-label="Menu principal">
+            <!-- Menu principal -->
+            <nav class="menu-container" id="menu-principal" aria-label="Menu principal">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
@@ -49,31 +51,27 @@
                     <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
                 </ul>
             </nav>
+
         </div>
     </header>
 
     <main id="conteudo" class="container secao">
         <section aria-labelledby="titulo-acessibilidade">
-            <div class="topo-pagina">
-                <p class="etiqueta">INCLUSÃO PARA TODAS AS PESSOAS</p>
-                <h1 id="titulo-acessibilidade">Acessibilidade e inclusão</h1>
-            </div>
+            <p class="etiqueta">INCLUSÃO PARA TODAS AS PESSOAS</p>
+            <h1 id="titulo-acessibilidade">Acessibilidade e inclusão</h1>
             <p>Este site foi desenvolvido para que pessoas com deficiência visual, auditiva, motora e cognitiva possam navegar com autonomia. Também levamos acessibilidade para os prédios dos nossos clientes.</p>
 
             <article>
                 <h2>Recursos de acessibilidade do site</h2>
                 <ul>
-                    <li><strong>Barra de acessibilidade:</strong> no topo de todas as páginas, sempre no mesmo lugar, com os botões abaixo. As escolhas ficam salvas no navegador.</li>
-                    <li><strong>Ouvir página:</strong> lê o conteúdo principal em voz alta, em português, trecho por trecho. O trecho lido fica destacado em amarelo e a página rola até ele. Dá para pausar, continuar e parar.</li>
-                    <li><strong>A− e A+:</strong> diminuem e aumentam o texto em quatro níveis (100%, 115%, 130% e 150%) sem quebrar o layout.</li>
-                    <li><strong>Alto contraste:</strong> fundo preto, texto branco e links amarelos, para pessoas com baixa visão.</li>
-                    <li><strong>Modo para daltônicos:</strong> troca a paleta verde por azul e laranja, cores mais fáceis de distinguir.</li>
+                    <li><strong>Modo para daltônicos:</strong> troca a paleta verde por azul e laranja, cores mais fáceis de distinguir. A preferência fica salva no navegador.</li>
+                    <li><strong>Leitura em voz alta:</strong> o botão "Ouvir a página" lê o conteúdo principal usando a voz do próprio navegador.</li>
+                    <li><strong>Aumento do texto:</strong> amplia o tamanho das letras em 30% sem quebrar o layout.</li>
                     <li><strong>Navegação por teclado:</strong> todos os links, botões e campos podem ser acessados com Tab, Shift+Tab e Enter, com foco amarelo bem visível.</li>
                     <li><strong>Atalho "Pular para o conteúdo":</strong> primeiro item ao pressionar Tab, leva direto ao conteúdo principal.</li>
-                    <li><strong>Leitores de tela:</strong> estrutura semântica HTML5 (header, nav, main, section, article, footer), idioma pt-BR declarado e atributos ARIA como aria-expanded, aria-current, aria-pressed e aria-live (avisos falados quando um recurso é ligado ou desligado).</li>
+                    <li><strong>Leitores de tela:</strong> estrutura semântica HTML5 (header, nav, main, section, article, footer), idioma pt-BR declarado e atributos ARIA como aria-expanded, aria-current e aria-live.</li>
                     <li><strong>Imagens:</strong> todas possuem texto alternativo (alt) descritivo e legenda com a fonte.</li>
-                    <li><strong>Contraste:</strong> texto escuro (#1f2d26) sobre fundo claro e texto branco sobre verde-escuro (#164b36), sempre acima do mínimo de 4,5:1 da WCAG 2.1 nível AA.</li>
-                    <li><strong>Tabelas no celular:</strong> viram cartões com o nome de cada coluna, sem rolagem lateral.</li>
+                    <li><strong>Contraste:</strong> texto branco sobre verde escuro (#164b36), com contraste acima de 4,5:1 exigido pela WCAG 2.1 nível AA.</li>
                     <li><strong>Formulário acessível:</strong> cada campo tem rótulo (label), instruções e mensagens de erro claras.</li>
                     <li><strong>Movimento reduzido:</strong> animações são desativadas para quem configurou essa preferência no sistema.</li>
                 </ul>

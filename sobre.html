@@ -6,36 +6,38 @@
     <meta name="description" content="Conheça a história, a missão, a visão e os valores da EcoLógica Soluções, consultoria em energia sustentável e inclusão.">
     <title>Sobre Nós | EcoLógica Soluções</title>
     <link rel="icon" href="img/logo.png" type="image/png">
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/style1.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
 
     <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
 
-    <div class="barra-acessibilidade" role="region" aria-label="Recursos de acessibilidade">
-        <div class="container barra-conteudo">
-            <span class="barra-titulo">Acessibilidade</span>
-            <button type="button" id="btn-leitor" class="btn-a11y" aria-pressed="false"><span aria-hidden="true">🔊</span> <span class="rotulo">Ouvir página</span></button>
-            <button type="button" id="btn-parar" class="btn-a11y" hidden><span aria-hidden="true">⏹</span> Parar</button>
-            <button type="button" id="btn-diminuir" class="btn-a11y">A− <span class="rotulo-longo">Diminuir texto</span></button>
-            <button type="button" id="btn-aumentar" class="btn-a11y">A+ <span class="rotulo-longo">Aumentar texto</span></button>
-            <button type="button" id="btn-contraste" class="btn-a11y" aria-pressed="false"><span aria-hidden="true">◐</span> <span class="rotulo-longo">Alto contraste</span></button>
-            <button type="button" id="btn-daltonismo" class="btn-a11y" aria-pressed="false"><span aria-hidden="true">🎨</span> <span class="rotulo-longo">Modo daltônico</span></button>
-        </div>
-    </div>
-
     <header class="cabecalho">
-        <div class="container cabecalho-conteudo">
+        <!-- LADO ESQUERDO: Logotipo -->
+        <div class="logo-container">
             <a class="logo" href="index.html">
-                <img src="img/logo.png" alt="EcoLógica Soluções - página inicial" width="500" height="500">
+                <img src="img/logo.png" alt="EcoLógica Soluções - ir para a página inicial" class="img-logo" width="500" height="500">
             </a>
+        </div>
 
-            <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu-principal">
-                <span aria-hidden="true">☰</span> Menu
+        <!-- LADO DIREITO: Acessibilidade + Menu -->
+        <div class="bloco-direita">
+
+            <!-- Ferramentas de acessibilidade -->
+            <div class="acessibilidade-container">
+                <button type="button" id="btn-daltonismo" class="btn-acessibilidade" aria-pressed="false">Daltônicos, clique aqui para ajuste de cores</button>
+                <button type="button" id="btn-leitor" class="btn-acessibilidade" aria-pressed="false">🔊 Clique aqui para ouvir a página</button>
+                <button type="button" id="btn-zoom" class="btn-acessibilidade" aria-pressed="false">+ Clique aqui para aumentar o tamanho do texto</button>
+            </div>
+
+            <!-- Botão do menu no celular -->
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
+                <span aria-hidden="true">☰</span>
             </button>
 
-            <nav class="menu" id="menu-principal" aria-label="Menu principal">
+            <!-- Menu principal -->
+            <nav class="menu-container" id="menu-principal" aria-label="Menu principal">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="sobre.html" aria-current="page">Sobre</a></li>
@@ -49,15 +51,14 @@
                     <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
                 </ul>
             </nav>
+
         </div>
     </header>
 
     <main id="conteudo" class="container secao">
         <section aria-labelledby="titulo-sobre">
-            <div class="topo-pagina">
-                <p class="etiqueta">NOSSA IDENTIDADE</p>
-                <h1 id="titulo-sobre">Sobre a EcoLógica Soluções</h1>
-            </div>
+            <p class="etiqueta">NOSSA IDENTIDADE</p>
+            <h1 id="titulo-sobre">Sobre a EcoLógica Soluções</h1>
 
             <article>
                 <h2>Nossa história</h2>

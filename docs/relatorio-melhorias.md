@@ -2,19 +2,6 @@
 
 Este relatório compara a entrega do MVP (A05, apresentada em 22/10/2026) com o site final (A06). Para os prints de "antes", veja `docs/evidencias/` (prints do MVP: `celular*.jpeg`, `telacheia*.png`, `telaminimizada*.png`) e o código original em `docs/mvp-codigo-original/`.
 
-## 0. Ajustes pedidos pelo professor (15/11/2026)
-
-Na revisão do projeto, o professor Paulo Fratta pediu ajustes em quatro pontos. Prints do "depois" em `docs/evidencias/`.
-
-| Ponto apontado pelo professor | Antes | Depois |
-|---|---|---|
-| **Acessibilidade** | Três botões com textos longos ("Daltônicos, clique aqui para ajuste de cores"), aumento de texto em um único passo e nenhum modo de alto contraste | Barra de acessibilidade compacta no topo de todas as páginas: Ouvir página, A− e A+ (4 níveis: 100% a 150%), Alto contraste (fundo preto, texto branco e links amarelos) e Modo daltônico. Botões com `aria-pressed`, avisos falados com `aria-live` e escolhas salvas no navegador (`acessibilidade-alto-contraste.png`, `acessibilidade-texto-aumentado.png`) |
-| **Ler a página (Ouvir página)** | Lia todo o conteúdo de uma vez: o Chrome cortava a leitura de textos longos, a voz podia sair em inglês e não dava para pausar nem saber o que estava sendo lido | Lê trecho por trecho (títulos, parágrafos, itens e linhas de tabela), com voz em português (pt-BR), destaca em amarelo e rola até o trecho lido, e tem Pausar, Continuar e Parar (`acessibilidade-ouvir-pagina.png`) |
-| **Página orcamento_hospedagem** | Tabelas escuras e apertadas, rolagem lateral no celular (colunas escondidas) e escolha da equipe pouco visível | Cartões de resumo no topo (Railway, Registro.br e R$ 4.500), opção escolhida destacada nas tabelas, seções numeradas, fontes com links e tabelas que viram cartões no celular, sem rolagem lateral (`paginas/10-orcamento_hospedagem.png`, `final-celular-tabela.png`) |
-| **Layout do site** | Cabeçalho alto (logo de 220 px, botões e menu em duas linhas), Home e páginas internas com folhas de estilo diferentes e texto branco sobre foto escura | Um único CSS (`css/estilo.css`), cabeçalho fixo e mais baixo com menu em uma linha, páginas internas com fundo claro e cartões brancos, faixa de título padronizada e menu "☰ Menu" no celular (`final-desktop.png`, `final-celular-menu-aberto.png`) |
-
-Depois dos ajustes, as 10 páginas foram validadas de novo no validator.w3.org: 0 erros e 0 avisos.
-
 ## 1. Pontos levantados na apresentação do MVP
 
 Na apresentação do MVP, a equipe listou as dificuldades encontradas (slide 14) e os próximos passos (slide 15). Veja como cada um foi resolvido:

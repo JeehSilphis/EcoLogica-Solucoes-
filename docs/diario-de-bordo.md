@@ -54,13 +54,3 @@ Registro das decisões, aprendizados, dificuldades e soluções da Atividade A05
 * **Atividade:** URLs atualizadas nos READMEs e na documentação; as 10 páginas validadas de novo no validator.w3.org pela URL nova.
 * **Dificuldade:** o validator.w3.org usa proteção anti-robô (Cloudflare) e bloqueia muitas validações seguidas (erro 429).
 * **Solução:** validar uma página por vez, com intervalo entre elas, depois de passar pela verificação "Confirme que é humano".
-
-### 15/11/2026 - Ajustes pedidos pelo professor
-* **Feedback:** ajustar a acessibilidade, o "ler a página", a página de orçamento e o layout do site.
-* **Decisão:** reescrever as partes comuns em vez de remendar: um único arquivo de CSS para todas as páginas e uma barra de acessibilidade padronizada.
-* **Acessibilidade:** botões curtos com ícones, aumento de texto em 4 níveis, novo modo de alto contraste e avisos falados para leitores de tela.
-* **Ouvir página:** a leitura passou a ser feita por trechos. **Aprendizado:** o Chrome interrompe falas longas da Web Speech API, então dividir o texto em frases resolve; também é preciso escolher a voz pt-BR explicitamente.
-* **Dificuldade:** ao testar com a voz real, o trecho destacado dentro da faixa escura do título ficava branco sobre amarelo, ilegível. **Solução:** forçar texto escuro no trecho destacado.
-* **Orçamento:** cartões de resumo, opção escolhida destacada e tabelas que viram cartões no celular.
-* **Testes:** W3C sem erros nas 10 páginas, prints refeitos com o layout novo e apresentação atualizada.
-

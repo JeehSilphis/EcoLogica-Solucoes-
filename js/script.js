@@ -1,11 +1,49 @@
-// =========================================================
-// EcoLógica Soluções - interações do site
-// =========================================================
+// ==========================================
+// 1. MENU DE NAVEGAÇÃO ACESSÍVEL (CELULAR)
+// ==========================================
+const botaoMenu = document.getElementById("menu-toggle");
+const menuPrincipal = document.getElementById("menu-principal");
 
-// ---------------------------------------------------------
-// Funções auxiliares para salvar preferências no navegador
+function fecharMenu() {
+    if (menuPrincipal) {
+        menuPrincipal.classList.remove("aberto");
+    }
+    if (botaoMenu) {
+        botaoMenu.setAttribute("aria-expanded", "false");
+        botaoMenu.setAttribute("aria-label", "Abrir menu de navegação");
+    }
+}
+
+if (botaoMenu && menuPrincipal) {
+    botaoMenu.addEventListener("click", () => {
+        const estaAberto = botaoMenu.getAttribute("aria-expanded") === "true";
+
+        botaoMenu.setAttribute("aria-expanded", String(!estaAberto));
+        botaoMenu.setAttribute(
+            "aria-label",
+            estaAberto ? "Abrir menu de navegação" : "Fechar menu de navegação"
+        );
+
+        menuPrincipal.classList.toggle("aberto", !estaAberto);
+    });
+
+    menuPrincipal.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", fecharMenu);
+    });
+
+    // Tecla Esc fecha o menu e devolve o foco para o botão
+    document.addEventListener("keydown", (evento) => {
+        if (evento.key === "Escape" && menuPrincipal.classList.contains("aberto")) {
+            fecharMenu();
+            botaoMenu.focus();
+        }
+    });
+}
+
+// ==========================================
+// Funções auxiliares para salvar preferências
 // (o navegador pode bloquear o localStorage)
-// ---------------------------------------------------------
+// ==========================================
 function lerPreferencia(chave) {
     try {
         return localStorage.getItem(chave);
@@ -22,297 +60,108 @@ function salvarPreferencia(chave, valor) {
     }
 }
 
-// Mensagem lida por leitores de tela (região aria-live criada pelo script)
-const avisoAcessivel = document.createElement("p");
-avisoAcessivel.className = "sr-only";
-avisoAcessivel.setAttribute("role", "status");
-document.body.appendChild(avisoAcessivel);
+// ==========================================
+// 2. MODO DALTONISMO
+// ==========================================
+const btnDaltonismo = document.getElementById("btn-daltonismo");
 
-function anunciar(mensagem) {
-    avisoAcessivel.textContent = "";
-    window.setTimeout(() => { avisoAcessivel.textContent = mensagem; }, 50);
+if (lerPreferencia("modo-daltonismo") === "ativo") {
+    document.body.classList.add("modo-daltonismo");
 }
 
-// ---------------------------------------------------------
-// 1. MENU NO CELULAR
-// ---------------------------------------------------------
-const botaoMenu = document.getElementById("menu-toggle");
-const menuPrincipal = document.getElementById("menu-principal");
+if (btnDaltonismo) {
+    btnDaltonismo.setAttribute(
+        "aria-pressed",
+        String(document.body.classList.contains("modo-daltonismo"))
+    );
 
-function fecharMenu() {
-    if (menuPrincipal && botaoMenu) {
-        menuPrincipal.classList.remove("aberto");
-        botaoMenu.setAttribute("aria-expanded", "false");
-    }
-}
-
-if (botaoMenu && menuPrincipal) {
-    botaoMenu.addEventListener("click", () => {
-        const abrir = botaoMenu.getAttribute("aria-expanded") !== "true";
-        botaoMenu.setAttribute("aria-expanded", String(abrir));
-        menuPrincipal.classList.toggle("aberto", abrir);
-    });
-
-    menuPrincipal.querySelectorAll("a").forEach((link) => link.addEventListener("click", fecharMenu));
-
-    // Esc fecha o menu e devolve o foco para o botão
-    document.addEventListener("keydown", (evento) => {
-        if (evento.key === "Escape" && menuPrincipal.classList.contains("aberto")) {
-            fecharMenu();
-            botaoMenu.focus();
-        }
+    btnDaltonismo.addEventListener("click", () => {
+        const ativo = document.body.classList.toggle("modo-daltonismo");
+        btnDaltonismo.setAttribute("aria-pressed", String(ativo));
+        salvarPreferencia("modo-daltonismo", ativo ? "ativo" : "inativo");
     });
 }
 
-// ---------------------------------------------------------
-// 2. MODOS DE COR: DALTONISMO E ALTO CONTRASTE
-// ---------------------------------------------------------
-function configurarModo(idBotao, classe, chave, nomeModo) {
-    const botao = document.getElementById(idBotao);
-    const ativoSalvo = lerPreferencia(chave) === "ativo";
-    document.body.classList.toggle(classe, ativoSalvo);
-
-    if (!botao) {
-        return;
-    }
-    botao.setAttribute("aria-pressed", String(ativoSalvo));
-
-    botao.addEventListener("click", () => {
-        const ativo = document.body.classList.toggle(classe);
-        botao.setAttribute("aria-pressed", String(ativo));
-        salvarPreferencia(chave, ativo ? "ativo" : "inativo");
-        anunciar(nomeModo + (ativo ? " ativado" : " desativado"));
-    });
-}
-
-configurarModo("btn-daltonismo", "modo-daltonismo", "modo-daltonismo", "Modo para daltônicos");
-configurarModo("btn-contraste", "alto-contraste", "alto-contraste", "Alto contraste");
-
-// ---------------------------------------------------------
-// 3. TAMANHO DO TEXTO (A− e A+, em 4 níveis)
-// ---------------------------------------------------------
-const NIVEIS_TEXTO = [100, 115, 130, 150];
-const btnAumentar = document.getElementById("btn-aumentar");
-const btnDiminuir = document.getElementById("btn-diminuir");
-let nivelTexto = Number(lerPreferencia("nivel-texto")) || 0;
-
-function aplicarTamanho(anunciarMudanca) {
-    nivelTexto = Math.min(Math.max(nivelTexto, 0), NIVEIS_TEXTO.length - 1);
-    document.documentElement.style.fontSize = NIVEIS_TEXTO[nivelTexto] + "%";
-    if (btnAumentar) {
-        btnAumentar.disabled = nivelTexto === NIVEIS_TEXTO.length - 1;
-    }
-    if (btnDiminuir) {
-        btnDiminuir.disabled = nivelTexto === 0;
-    }
-    salvarPreferencia("nivel-texto", String(nivelTexto));
-    if (anunciarMudanca) {
-        anunciar("Tamanho do texto: " + NIVEIS_TEXTO[nivelTexto] + " por cento");
-    }
-}
-
-aplicarTamanho(false);
-
-if (btnAumentar && btnDiminuir) {
-    btnAumentar.addEventListener("click", () => { nivelTexto += 1; aplicarTamanho(true); });
-    btnDiminuir.addEventListener("click", () => { nivelTexto -= 1; aplicarTamanho(true); });
-}
-
-// ---------------------------------------------------------
-// 4. OUVIR A PÁGINA (Web Speech API)
-//    Lê o conteúdo principal trecho por trecho, destacando
-//    e rolando até o trecho lido. Permite pausar e parar.
-// ---------------------------------------------------------
-const btnLeitor = document.getElementById("btn-leitor");
-const btnParar = document.getElementById("btn-parar");
-
-if (btnLeitor) {
-    const rotuloLeitor = btnLeitor.querySelector(".rotulo");
-    const iconeLeitor = btnLeitor.querySelector("[aria-hidden]");
-
-    if (!("speechSynthesis" in window)) {
-        // Navegador sem suporte: o botão explica em vez de falhar em silêncio
-        btnLeitor.addEventListener("click", () => {
-            anunciar("Seu navegador não tem leitura em voz. Use o Chrome, o Edge ou o leitor de tela do sistema.");
-        });
-    } else {
-        const fala = window.speechSynthesis;
-        let trechos = [];
-        let posicao = 0;
-        let estado = "parado"; // parado | lendo | pausado
-        let vozPortugues = null;
-
-        function escolherVoz() {
-            const vozes = fala.getVoices();
-            vozPortugues = vozes.find((v) => v.lang === "pt-BR")
-                || vozes.find((v) => v.lang.toLowerCase().startsWith("pt"))
-                || null;
-        }
-        escolherVoz();
-        fala.addEventListener("voiceschanged", escolherVoz);
-
-        function visivel(el) {
-            return el.getClientRects().length > 0 && getComputedStyle(el).visibility !== "hidden";
-        }
-
-        // Divide textos longos em frases: o Chrome interrompe falas muito longas
-        function dividir(texto) {
-            const partes = texto.match(/[^.!?;:]+[.!?;:]*/g) || [texto];
-            const saida = [];
-            let atual = "";
-            partes.forEach((p) => {
-                if ((atual + p).length > 180 && atual) {
-                    saida.push(atual.trim());
-                    atual = "";
-                }
-                atual += p;
-            });
-            if (atual.trim()) {
-                saida.push(atual.trim());
-            }
-            return saida;
-        }
-
-        function montarTrechos() {
-            const principal = document.querySelector("main") || document.body;
-            const seletor = "h1, h2, h3, p, li, caption, figcaption, summary, tr, label, .valor";
-            const lista = [];
-            principal.querySelectorAll(seletor).forEach((el) => {
-                // Evita ler duas vezes um texto que está dentro de outro trecho já lido
-                if (el.parentElement.closest("li, tr, p, figcaption, caption, summary, label")) {
-                    return;
-                }
-                if (!visivel(el) || el.closest("[aria-hidden='true'], .sr-only")) {
-                    return;
-                }
-                let texto;
-                if (el.tagName === "TR") {
-                    texto = Array.from(el.cells).map((c) => c.innerText.trim()).filter(Boolean).join(". ");
-                } else {
-                    texto = el.innerText.trim();
-                }
-                if (texto) {
-                    dividir(texto).forEach((parte) => lista.push({ el, texto: parte }));
-                }
-            });
-            return lista;
-        }
-
-        function limparDestaque() {
-            document.querySelectorAll(".lendo").forEach((el) => el.classList.remove("lendo"));
-        }
-
-        function atualizarBotoes() {
-            const textos = { parado: "Ouvir página", lendo: "Pausar leitura", pausado: "Continuar leitura" };
-            const icones = { parado: "🔊", lendo: "⏸", pausado: "▶" };
-            rotuloLeitor.textContent = textos[estado];
-            iconeLeitor.textContent = icones[estado];
-            btnLeitor.setAttribute("aria-pressed", String(estado !== "parado"));
-            if (btnParar) {
-                btnParar.hidden = estado === "parado";
-            }
-        }
-
-        function falarProximo() {
-            if (estado !== "lendo") {
-                return;
-            }
-            limparDestaque();
-            if (posicao >= trechos.length) {
-                parar();
-                anunciar("Leitura concluída");
-                return;
-            }
-            const { el, texto } = trechos[posicao];
-            el.classList.add("lendo");
-            el.scrollIntoView({ block: "center", behavior: "smooth" });
-
-            const frase = new SpeechSynthesisUtterance(texto);
-            frase.lang = "pt-BR";
-            if (vozPortugues) {
-                frase.voice = vozPortugues;
-            }
-            frase.rate = 1;
-            frase.onend = () => {
-                if (estado === "lendo") {
-                    posicao += 1;
-                    falarProximo();
-                }
-            };
-            frase.onerror = (e) => {
-                if (e.error !== "interrupted" && e.error !== "canceled" && estado === "lendo") {
-                    posicao += 1;
-                    falarProximo();
-                }
-            };
-            fala.speak(frase);
-        }
-
-        function iniciar() {
-            fala.cancel();
-            trechos = montarTrechos();
-            posicao = 0;
-            estado = "lendo";
-            atualizarBotoes();
-            falarProximo();
-        }
-
-        function pausar() {
-            // Cancelar e recomeçar do trecho atual é mais confiável que pause()/resume()
-            estado = "pausado";
-            fala.cancel();
-            atualizarBotoes();
-        }
-
-        function continuar() {
-            estado = "lendo";
-            atualizarBotoes();
-            falarProximo();
-        }
-
-        function parar() {
-            estado = "parado";
-            fala.cancel();
-            limparDestaque();
-            atualizarBotoes();
-        }
-
-        btnLeitor.addEventListener("click", () => {
-            if (estado === "parado") {
-                iniciar();
-            } else if (estado === "lendo") {
-                pausar();
-            } else {
-                continuar();
-            }
-        });
-
-        if (btnParar) {
-            btnParar.addEventListener("click", () => {
-                parar();
-                btnLeitor.focus();
-            });
-        }
-
-        // Para a leitura ao sair da página
-        window.addEventListener("pagehide", () => fala.cancel());
-
-        // Expõe para testes no console do navegador
-        window.leitorEcoLogica = { montarTrechos, estado: () => estado };
-    }
-}
-
-// ---------------------------------------------------------
-// 5. ANO ATUAL NO RODAPÉ
-// ---------------------------------------------------------
+// ==========================================
+// 3. ANO ATUAL NO RODAPÉ
+// ==========================================
 const anoAtual = document.getElementById("ano-atual");
 if (anoAtual) {
     anoAtual.textContent = new Date().getFullYear();
 }
 
-// ---------------------------------------------------------
+// ==========================================
+// 4. AUMENTAR TEXTO (BAIXA VISÃO)
+// ==========================================
+const btnZoom = document.getElementById("btn-zoom");
+const TEXTO_ZOOM_LIGADO = "- Clique aqui para reduzir o tamanho do texto";
+const TEXTO_ZOOM_DESLIGADO = "+ Clique aqui para aumentar o tamanho do texto";
+
+function aplicarZoom(ativo) {
+    document.documentElement.classList.toggle("zoom-ativo", ativo);
+    if (btnZoom) {
+        btnZoom.textContent = ativo ? TEXTO_ZOOM_LIGADO : TEXTO_ZOOM_DESLIGADO;
+        btnZoom.setAttribute("aria-pressed", String(ativo));
+    }
+}
+
+aplicarZoom(lerPreferencia("zoom") === "ativo");
+
+if (btnZoom) {
+    btnZoom.addEventListener("click", () => {
+        const ativo = !document.documentElement.classList.contains("zoom-ativo");
+        aplicarZoom(ativo);
+        salvarPreferencia("zoom", ativo ? "ativo" : "inativo");
+    });
+}
+
+// ==========================================
+// 5. LEITURA DA PÁGINA EM VOZ ALTA (Web Speech API)
+// ==========================================
+const btnLeitor = document.getElementById("btn-leitor");
+const TEXTO_LEITOR = "🔊 Clique aqui para ouvir a página";
+
+if (btnLeitor) {
+    if (!("speechSynthesis" in window)) {
+        // Navegador sem suporte: esconde o botão para não confundir
+        btnLeitor.hidden = true;
+    } else {
+        let estaLendo = false;
+
+        const pararLeitura = () => {
+            window.speechSynthesis.cancel();
+            estaLendo = false;
+            btnLeitor.textContent = TEXTO_LEITOR;
+            btnLeitor.setAttribute("aria-pressed", "false");
+        };
+
+        btnLeitor.addEventListener("click", () => {
+            if (estaLendo) {
+                pararLeitura();
+                return;
+            }
+
+            const conteudo = document.querySelector("main") || document.body;
+            const fala = new SpeechSynthesisUtterance(conteudo.innerText);
+            fala.lang = "pt-BR";
+            fala.rate = 1.1;
+            fala.onend = pararLeitura;
+
+            window.speechSynthesis.cancel();
+            window.speechSynthesis.speak(fala);
+            estaLendo = true;
+            btnLeitor.textContent = "🔇 Parar leitura";
+            btnLeitor.setAttribute("aria-pressed", "true");
+        });
+
+        // Para a leitura ao sair da página
+        window.addEventListener("pagehide", () => window.speechSynthesis.cancel());
+    }
+}
+
+// ==========================================
 // 6. FORMULÁRIO DE CONTATO (validação extra)
-// ---------------------------------------------------------
+// ==========================================
 const formulario = document.getElementById("form-contato");
 const statusFormulario = document.getElementById("status-formulario");
 
@@ -354,7 +203,7 @@ if (formulario && statusFormulario) {
 
             // Mostra também o aviso geral abaixo do botão de envio
             statusFormulario.className = "status-formulario erro";
-            statusFormulario.textContent = "Há campos com erro. Corrija os campos destacados e envie novamente.";
+            statusFormulario.textContent = "Há campos com erro. Corrija os campos destacados em amarelo e envie novamente.";
         });
 
         const limpar = () => {

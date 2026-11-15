@@ -4,7 +4,7 @@
 
 ## 1. W3C Validator (HTML) - 10 páginas
 
-**Validação oficial em 15/11/2026, refeita depois dos ajustes pedidos pelo professor, no https://validator.w3.org/nu/ (Nu Html Checker, vnu 26.11.14), pela URL publicada https://ecologica.up.railway.app:** as 10 páginas passaram com **0 erros e 0 avisos** ("Document checking completed. No errors or warnings to show.").
+**Validação oficial em 15/11/2026 no https://validator.w3.org/nu/ (Nu Html Checker, vnu 26.11.14), pela URL publicada https://ecologica.up.railway.app:** as 10 páginas passaram com **0 erros e 0 avisos** ("Document checking completed. No errors or warnings to show.").
 
 Como repetir: acessar https://validator.w3.org/ → aba **Validate by URI** → colar o endereço de cada página → **Check**. O validator.w3.org tem proteção anti-robô (Cloudflare) e pode pedir "Confirme que é humano" ou bloquear muitas consultas seguidas; nesse caso, valide uma página por vez.
 
@@ -31,7 +31,7 @@ Outras verificações automáticas feitas no código (12/11/2026): todas as tags
 |---|---|---|
 | Tab na primeira vez | Aparece o link "Pular para o conteúdo principal" | ✅ `teclado-1-pular-conteudo.png` |
 | Enter no link de pular | Foco vai para o conteúdo da página | ☐ |
-| Tab pelos botões de acessibilidade e menu | Contorno amarelo visível em cada item | ✅ `teclado-2-foco-menu.png` (foco em "Sobre", depois da barra de acessibilidade) |
+| Tab pelos botões de acessibilidade e menu | Contorno amarelo visível em cada item | ✅ `teclado-2-foco-menu.png` (foco em "Sobre") |
 | Enter em um item do menu | Abre a página correspondente | ☐ |
 | No celular: Enter no botão ☰ e Esc | Menu abre e fecha; foco volta ao botão | ☐ |
 | Formulário só com teclado | Todos os campos alcançáveis; Espaço marca a caixa LGPD | ☐ |
@@ -66,7 +66,7 @@ Prints do site publicado (A06):
 * Tablet (768 × 1024): `final-tablet.png`
 * Desktop (1366 × 900): `final-desktop.png`
 * As 10 páginas no desktop (também servem de plano B da apresentação): pasta `paginas/` (`01-index.png` a `10-orcamento_hospedagem.png`)
-* Recursos de acessibilidade (layout novo, 15/11/2026): `acessibilidade-ouvir-pagina.png` (leitura em andamento, capturada com a voz pt-BR lendo; trecho atual destacado em amarelo), `acessibilidade-alto-contraste.png`, `acessibilidade-modo-daltonico.png` e `acessibilidade-texto-aumentado.png` (A+ duas vezes = 130%)
+* Recursos de acessibilidade: `acessibilidade-modo-daltonico.png`, `acessibilidade-texto-aumentado.png`
 
 ## 5. Formulário (contato.html)
 

@@ -49,7 +49,7 @@ Site institucional de uma empresa fictícia de consultoria em **energia sustent�
 
 * **HTML5** semântico (`header`, `nav`, `main`, `section`, `article`, `footer`, `figure`, `details`).
 * **CSS3** com variáveis, Grid, Flexbox e Media Queries (celular, tablet e desktop).
-* **JavaScript** puro: menu para celular, barra de acessibilidade (ouvir página com destaque do trecho lido, A−/A+, alto contraste e modo daltônico) e validação extra do formulário.
+* **JavaScript** puro: menu para celular, modo daltônico, leitura em voz (Web Speech API), aumento de texto e validação extra do formulário.
 * **Git + GitHub** para versionamento e **Railway** para hospedagem (servidor estático `serve`, Node.js).
 * Editor: Visual Studio Code.
 
@@ -66,7 +66,7 @@ EcoLogica/
 ├── index.html, contato.html, orcamento_hospedagem.html
 ├── sobre.html, projetos.html, impacto.html, acessibilidade.html,
 │   galeria.html, midia.html, noticias.html
-├── css/      estilo.css (folha de estilo única de todas as páginas)
+├── css/      style.css (home) e style1.css (páginas internas)
 ├── js/       script.js
 ├── img/      logotipo, fotos e poster do vídeo
 ├── assets/   vídeo e podcast
@@ -85,7 +85,7 @@ EcoLogica/
 * Escopo do projeto (A05): `EscopoEcoLogica.docx`
 * Detalhamento de custos: `custos.docx`
 * Apresentação do MVP: `Apresentacao-MVP-EcoLogica.pptx`
-* Apresentação final (A06, 18 slides): `Apresentacao-Final-EcoLogica.pptx` e `Apresentacao-Final-EcoLogica.pdf`
+* Apresentação final (A06, 17 slides): `Apresentacao-Final-EcoLogica.pptx` e `Apresentacao-Final-EcoLogica.pdf`
 * Prints de testes: pasta `evidencias/`
 * Código original do MVP (para comparação): pasta `mvp-codigo-original/`
 
