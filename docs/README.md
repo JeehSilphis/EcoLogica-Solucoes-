@@ -12,7 +12,7 @@ Site institucional de uma empresa fictícia de consultoria em **energia sustent�
 
 | Item | Endereço |
 |---|---|
-| Site publicado (Railway, HTTPS) | **https://ecologica-solucoes-production.up.railway.app** |
+| Site publicado (Railway, HTTPS) | **https://ecologica.up.railway.app** |
 | Repositório no GitHub | **https://github.com/JeehSilphis/EcoLogica-Solucoes-** |
 
 
