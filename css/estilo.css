@@ -965,11 +965,14 @@ body.alto-contraste form {
     }
 
     .barra-conteudo {
-        gap: 0.35rem;
+        gap: 0.3rem;
+        justify-content: space-between;
     }
 
     .btn-a11y {
-        padding: 0.3rem 0.65rem;
+        gap: 0.25rem;
+        padding: 0.3rem 0.55rem;
+        font-size: 0.9rem;
     }
 
     .btn-a11y .rotulo-longo {
