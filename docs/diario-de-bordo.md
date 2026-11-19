@@ -54,3 +54,10 @@ Registro das decisões, aprendizados, dificuldades e soluções da Atividade A05
 * **Atividade:** URLs atualizadas nos READMEs e na documentação; as 10 páginas validadas de novo no validator.w3.org pela URL nova.
 * **Dificuldade:** o validator.w3.org usa proteção anti-robô (Cloudflare) e bloqueia muitas validações seguidas (erro 429).
 * **Solução:** validar uma página por vez, com intervalo entre elas, depois de passar pela verificação "Confirme que é humano".
+
+### 19/11/2026 - Aula 10 (JavaScript): validação da mensagem do formulário
+* **Atividade da aula:** impedir o envio do formulário de contato quando o campo "Mensagem" tiver menos de 10 caracteres, mostrando uma mensagem de erro em vermelho abaixo do campo.
+* **Como foi feito:** no `script.js`, o evento `submit` usa `event.preventDefault()`, conta os caracteres da mensagem com `trim().length` e, se forem menos de 10, mostra o erro em um `<span>` com `role="alert"` (ligado ao campo por `aria-describedby`), deixa a borda vermelha e coloca o foco no campo. O erro some sozinho quando a pessoa completa os 10 caracteres (evento `input`).
+* **Decisão:** usar um vermelho claro (#ff9a92), porque o vermelho puro sobre o fundo verde-escuro do formulário não teria o contraste mínimo de 4,5:1.
+* **Testes:** 6 de 6 aprovados no site publicado (5 caracteres, só espaços, exatamente 10, erro que some ao completar e os demais campos ainda validados pelo HTML5); W3C sem erros.
+

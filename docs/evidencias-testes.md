@@ -78,6 +78,7 @@ Prints do site publicado (A06):
 | Telefone com 4 dígitos | Mensagem pedindo 10 ou 11 dígitos | ✅ `formulario-1-erro-campos.png` |
 | Data no passado | Não é aceita (mínimo = hoje) | ✅ 14/11/2026 recusada (mínimo 15/11/2026), mensagem "Escolha uma data a partir de hoje." |
 | Funcionários = 0 | Mensagem pedindo número a partir de 1 | ✅ valor 0 recusado, mensagem "Informe um número de funcionários a partir de 1." |
+| Mensagem com menos de 10 caracteres (regra em JavaScript, Aula 10) | Envio bloqueado e erro em vermelho abaixo do campo | ✅ `formulario-4-mensagem-curta.png`: "A mensagem precisa ter pelo menos 10 caracteres (você digitou 5)."; o erro some ao completar 10 caracteres; só espaços também é recusado; exatamente 10 caracteres é aceito (testado no site publicado em 19/11/2026) |
 | Tudo correto | Mensagem verde "Obrigado, ...!" e formulário limpo | ✅ `formulario-3-envio-correto.png` |
 
 Ao enviar com erro, os campos inválidos ficam com borda amarela e aparece o aviso "Há campos com erro..." abaixo do botão (`formulario-2-erro-aviso.png`). Teste automatizado (12/11/2026): nome "Maria 123" foi bloqueado com a mensagem em português; preenchimento correto exibiu a mensagem de sucesso; data mínima ficou igual à data do dia.
