@@ -214,14 +214,52 @@ if (formulario && statusFormulario) {
         campo.addEventListener("change", limpar);
     });
 
+    // Mensagem: precisa ter pelo menos 10 caracteres (validação feita só com JavaScript)
+    const campoMensagem = document.getElementById("mensagem");
+    const erroMensagem = document.getElementById("erro-mensagem");
+    const MINIMO_MENSAGEM = 10;
+
+    function validarMensagem() {
+        const tamanho = campoMensagem.value.trim().length;
+
+        if (tamanho < MINIMO_MENSAGEM) {
+            erroMensagem.innerText = "A mensagem precisa ter pelo menos " + MINIMO_MENSAGEM +
+                " caracteres (você digitou " + tamanho + ").";
+            campoMensagem.classList.add("campo-erro");
+            campoMensagem.setAttribute("aria-invalid", "true");
+            return false;
+        }
+
+        erroMensagem.innerText = "";
+        campoMensagem.classList.remove("campo-erro");
+        campoMensagem.removeAttribute("aria-invalid");
+        return true;
+    }
+
+    // Depois do primeiro erro, a mensagem some assim que a pessoa completa os 10 caracteres
+    if (campoMensagem && erroMensagem) {
+        campoMensagem.addEventListener("input", () => {
+            if (erroMensagem.innerText !== "") {
+                validarMensagem();
+            }
+        });
+    }
+
     formulario.addEventListener("submit", (evento) => {
-        evento.preventDefault();
+        evento.preventDefault(); // impede o envio enquanto o formulário é validado
         statusFormulario.className = "status-formulario";
 
         if (!formulario.checkValidity()) {
             statusFormulario.textContent = "Há campos com erro. Corrija os campos destacados e envie novamente.";
             statusFormulario.classList.add("erro");
             formulario.reportValidity();
+            return;
+        }
+
+        if (campoMensagem && erroMensagem && !validarMensagem()) {
+            statusFormulario.textContent = "Há campos com erro. Corrija a mensagem e envie novamente.";
+            statusFormulario.classList.add("erro");
+            campoMensagem.focus();
             return;
         }
 

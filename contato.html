@@ -113,8 +113,11 @@
                     </select>
                 </div>
                 <div class="campo">
-                    <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" rows="5" maxlength="1000"></textarea>
+                    <label for="mensagem">Mensagem *</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" maxlength="1000"
+                              aria-describedby="ajuda-mensagem erro-mensagem"></textarea>
+                    <small id="ajuda-mensagem" class="ajuda">Escreva pelo menos 10 caracteres.</small>
+                    <span id="erro-mensagem" class="erro-campo" role="alert"></span>
                 </div>
                 <div class="campo campo-checkbox">
                     <input type="checkbox" id="lgpd" name="lgpd" required>

@@ -773,6 +773,18 @@ tfoot td {
     border: 3px solid #ffbf47;
 }
 
+/* Erro da mensagem (menos de 10 caracteres): texto e borda em vermelho */
+.erro-campo {
+    display: block;
+    margin-top: 0.4rem;
+    color: #ff9a92; /* vermelho claro: contraste de 4,9:1 sobre o verde-escuro */
+    font-weight: 700;
+}
+
+.campo textarea.campo-erro {
+    border: 3px solid #ff6b6b;
+}
+
 .status-formulario {
     margin-top: 1rem;
     font-weight: 700;
