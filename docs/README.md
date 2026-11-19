@@ -81,7 +81,6 @@ EcoLogica/
 * [Orçamento de hospedagem e domínio](orcamento-hospedagem.md)
 * [Evidências de testes](evidencias-testes.md)
 * [Relatório de melhorias (MVP → final)](relatorio-melhorias.md)
-* [Como publicar no Railway](deploy-railway.md)
 * Escopo do projeto (A05): `EscopoEcoLogica.docx`
 * Detalhamento de custos: `custos.docx`
 * Apresentação do MVP: `Apresentacao-MVP-EcoLogica.pptx`
