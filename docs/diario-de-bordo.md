@@ -68,3 +68,31 @@ Registro das decisões, aprendizados, dificuldades e soluções da Atividade A05
 * **Dificuldade:** num dos testes automáticos, o player parecia não carregar. **Solução:** o print mostrou que ele carregava normalmente; o teste é que procurava o player no lugar errado, porque o Chrome abre o YouTube num processo separado.
 * **Testes:** 4 de 4 aprovados no site publicado (vídeo carregado, clique, tecla Enter e celular sem rolagem lateral); W3C sem erros.
 
+---
+
+## Uso de Inteligência Artificial no projeto
+
+Conforme as Aulas 08 e 09 (ética e uso responsável da IA), declaro que usei IA generativa como **assistente** neste projeto. A IA ajudou a sugerir código, revisar erros e testar o site publicado. Todas as decisões, a revisão do resultado e a aprovação final foram minhas. Nenhum dado pessoal real foi colado nos prompts (LGPD).
+
+* **Ferramenta:** Claude (Anthropic), pelo aplicativo Claude Code.
+* **Onde ajudou:** organização das pastas para o deploy, correções apontadas pelo W3C, revisão de acessibilidade, scripts de teste automático (teclado, formulário e vídeo) e prints de evidência.
+* **Como revisei:** cada mudança foi conferida no navegador, validada no W3C Validator, testada com o teclado e publicada com um commit de mensagem clara. Quando o resultado não ficou como eu queria, desfiz a mudança.
+
+### Prompt 1 · 19/11/2026 · Formulário com mensagem mínima (Aula 10)
+* **Prompt (resumido):** "Hoje o professor deu a aula de JavaScript e pediu para implementar a parte do formulário: não deixar enviar se a mensagem tiver menos de 10 caracteres e mostrar o erro em vermelho abaixo do campo. Nosso formulário já tem esse código? Mexa só no formulário."
+* **Resultado:** ajustado. A IA mostrou que o formulário já tinha validação HTML5, mas ainda não tinha a regra dos 10 caracteres, e sugeriu a função `validarMensagem()` com `preventDefault()` e `trim().length`.
+* **O que mudei:** pedi para mexer só no formulário, sem alterar o visual. O vermelho puro não tinha contraste suficiente no fundo verde-escuro, então troquei por um vermelho claro (#ff9a92).
+* **O que aprendi:** o JavaScript complementa a validação do HTML5. O `role="alert"` e o `aria-describedby` fazem o leitor de tela anunciar o erro.
+
+### Prompt 2 · 20/11/2026 · Vídeo sobre reciclagem na página de mídia (Aula 10)
+* **Prompt (resumido):** "Pode criar na página de mídia um vídeo do YouTube sobre reciclagem com iframe e um botão abaixo dele que mostra um alerta usando addEventListener."
+* **Resultado:** aceito depois de conferir. Antes de inserir o vídeo, conferi que o YouTube permite incorporá-lo em outros sites.
+* **O que mudei:** usei o endereço `youtube-nocookie.com` (sem cookies de rastreamento antes do play), coloquei `title` no iframe e mantive o vídeo responsivo em 16:9.
+* **O que aprendi:** iframes precisam de `title` para acessibilidade. Um teste automático pode falhar por causa do próprio teste: o print mostrou que o vídeo carregava normalmente.
+
+### Prompt 3 · 15/11/2026 · Ajustes pedidos pelo professor (prompt vago × específico)
+* **Prompt (resumido):** "O professor falou para eu ajustar a parte de acessibilidade, o ler a página, a página do orçamento_hospedagem e o layout do site."
+* **Resultado:** rejeitado e desfeito. Como o pedido estava vago, a IA mudou o layout além do que eu queria, e o site deixou de ficar como era.
+* **O que mudei:** desfiz as mudanças com `git revert`, voltando para a versão com os 2 arquivos CSS originais. Depois passei a fazer pedidos específicos, dizendo o arquivo, o que mudar e o que **não** mudar, por exemplo: "mexa só no formulário".
+* **O que aprendi:** na prática, foi o que a Aula 08 mostra no slide "prompt vago × prompt específico". Um bom prompt precisa ter contexto, objetivo, formato e restrições. A IA pode errar ou exagerar, e por isso cada mudança deve ser revisada antes do commit, e o Git permite voltar atrás com segurança.
+
