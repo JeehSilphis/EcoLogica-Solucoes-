@@ -61,3 +61,10 @@ Registro das decisões, aprendizados, dificuldades e soluções da Atividade A05
 * **Decisão:** usar um vermelho claro (#ff9a92), porque o vermelho puro sobre o fundo verde-escuro do formulário não teria o contraste mínimo de 4,5:1.
 * **Testes:** 6 de 6 aprovados no site publicado (5 caracteres, só espaços, exatamente 10, erro que some ao completar e os demais campos ainda validados pelo HTML5); W3C sem erros.
 
+### 20/11/2026 - Aula 10 (JavaScript): vídeo sobre reciclagem na página de mídia
+* **Atividade da aula:** inserir em midia.html um vídeo do YouTube sobre reciclagem usando `<iframe>` e criar um botão abaixo dele que mostra um alerta com `addEventListener`.
+* **Escolha do vídeo:** "Coleta Seletiva", do canal Momento Ambiental (categoria Educação, 7 minutos). Antes de usar, foi conferido que o YouTube permite incorporar esse vídeo em outros sites.
+* **Como foi feito:** o iframe usa o endereço `youtube-nocookie.com` (o YouTube não grava cookies de rastreamento até a pessoa dar o play), tem `title` para leitores de tela e fica dentro da caixa `.iframe-responsivo`, que mantém a proporção 16:9 em qualquer tela. O botão "Já assisti ao vídeo" usa `addEventListener('click')` para mostrar o aviso "Você assistiu ao vídeo sobre reciclagem! Apoie a EcoLógica."
+* **Dificuldade:** num dos testes automáticos, o player parecia não carregar. **Solução:** o print mostrou que ele carregava normalmente; o teste é que procurava o player no lugar errado, porque o Chrome abre o YouTube num processo separado.
+* **Testes:** 4 de 4 aprovados no site publicado (vídeo carregado, clique, tecla Enter e celular sem rolagem lateral); W3C sem erros.
+

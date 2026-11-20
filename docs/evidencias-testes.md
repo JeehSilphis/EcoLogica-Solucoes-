@@ -90,6 +90,8 @@ Ao enviar com erro, os campos inválidos ficam com borda amarela e aparece o avi
 | Vídeo toca com poster | ✅ carregou no site publicado (12/11) |
 | Podcast toca | ✅ carregou no site publicado (12/11) |
 | Mapa aparece | ✅ |
+| Vídeo do YouTube sobre reciclagem (iframe, Aula 10) | ✅ `midia-video-reciclagem.png`: vídeo "Coleta Seletiva - Momento Ambiental" carregado no site publicado, ocupando a largura do conteúdo também no celular (375 px, sem rolagem lateral) |
+| Botão "Já assisti ao vídeo" (addEventListener) | ✅ o clique e o Enter pelo teclado mostram o aviso "Você assistiu ao vídeo sobre reciclagem! Apoie a EcoLógica." (testado em 20/11/2026) |
 | Todas as imagens da galeria aparecem | ✅ todas respondem 200 |
 | Todos os 10 itens do menu abrem sem erro 404 | ✅ |
 | Endereço começa com https:// (cadeado) | ✅ http redireciona para https |
