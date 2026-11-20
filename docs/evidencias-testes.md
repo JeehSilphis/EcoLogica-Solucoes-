@@ -6,6 +6,8 @@
 
 **Validação oficial em 15/11/2026 no https://validator.w3.org/nu/ (Nu Html Checker, vnu 26.11.14), pela URL publicada https://ecologica.up.railway.app:** as 10 páginas passaram com **0 erros e 0 avisos** ("Document checking completed. No errors or warnings to show.").
 
+Em 20/11/2026, depois das atividades da Aula 10, `contato.html` e `midia.html` foram validadas de novo no validator.w3.org (vnu 26.11.20): 0 erros e 0 avisos (prints `w3c-contato.png` e `w3c-midia.png` atualizados).
+
 Como repetir: acessar https://validator.w3.org/ → aba **Validate by URI** → colar o endereço de cada página → **Check**. O validator.w3.org tem proteção anti-robô (Cloudflare) e pode pedir "Confirme que é humano" ou bloquear muitas consultas seguidas; nesse caso, valide uma página por vez.
 
 | Página | Resultado | Print |
@@ -65,7 +67,7 @@ Prints do site publicado (A06):
 * Celular (375 × 812): `final-celular.png`, `final-celular-menu-aberto.png`, `final-celular-galeria.png`, `final-celular-tabela.png`
 * Tablet (768 × 1024): `final-tablet.png`
 * Desktop (1366 × 900): `final-desktop.png`
-* As 10 páginas no desktop (também servem de plano B da apresentação): pasta `paginas/` (`01-index.png` a `10-orcamento_hospedagem.png`)
+* As 10 páginas no desktop (também servem de plano B da apresentação): pasta `paginas/` (`01-index.png` a `10-orcamento_hospedagem.png`); em 20/11/2026 foram refeitas as de Mídia e Contato e acrescentadas `07b-midia-video-youtube.png` (vídeo do YouTube e botão) e `09b-contato-mensagem-curta.png` (erro da mensagem com menos de 10 caracteres)
 * Recursos de acessibilidade: `acessibilidade-modo-daltonico.png`, `acessibilidade-texto-aumentado.png`
 
 ## 5. Formulário (contato.html)
