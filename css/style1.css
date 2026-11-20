@@ -727,6 +727,11 @@ tfoot td {
     max-width: 800px;
 }
 
+/* Espaço entre o vídeo do YouTube e o botão abaixo dele */
+.acoes-video {
+    margin-top: 1.2rem;
+}
+
 .iframe-responsivo {
     position: relative;
     width: 100%;

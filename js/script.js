@@ -271,3 +271,14 @@ if (formulario && statusFormulario) {
         formulario.reset();
     });
 }
+
+// ==========================================
+// 7. BOTÃO ABAIXO DO VÍDEO SOBRE RECICLAGEM (midia.html)
+// ==========================================
+const btnVideoReciclagem = document.getElementById("btn-video-reciclagem");
+
+if (btnVideoReciclagem) {
+    btnVideoReciclagem.addEventListener("click", () => {
+        alert("Você assistiu ao vídeo sobre reciclagem! Apoie a EcoLógica.");
+    });
+}
